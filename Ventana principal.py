@@ -33,31 +33,41 @@ usuariovisible.pack()
         
 
 
-supphoto=supphoto=tk.PhotoImage(file='Supphoto.png')
-batphoto=tk.PhotoImage(file='Batphoto.png')
-wophoto=tk.PhotoImage(file='Wonderphoto.png')
-flashphoto=tk.PhotoImage(file='Flashphoto.png')
+supphoto_original=Image.open('Supphoto.png')
+batphoto_original=Image.open('Batphoto.png')
+wophoto_original=Image.open('Wonderphoto.png')
+flashphoto_original=Image.open('Flashphoto.png')
 
+supphoto_resize=supphoto_original.resize((100,100))
+supphoto=ImageTk.PhotoImage(supphoto_resize)
+
+batphoto_resize=batphoto_original.resize((100,100))
+batphoto=ImageTk.PhotoImage(batphoto_resize)
+
+wophoto_resize=wophoto_original.resize((100,100))
+wophoto=ImageTk.PhotoImage(wophoto_resize)
+
+flashphoto_resize=flashphoto_original.resize((100,100))
+flashphoto=ImageTk.PhotoImage(flashphoto_resize)
 
 x=tk.IntVar()
 
 Supbox=tk.Checkbutton(window,text='Superman ',variable=x, onvalue=1, offvalue=0, 
-                        font=('Oswald ',12),bg= 'grey', fg='blue',
+                        font=('Oswald ',12),bg= 'grey', fg='blue',width=175,height=100, 
                         activeforeground='red', activebackground='black', image=supphoto, compound = 'right')
 Wobox=tk.Checkbutton(window,text='Wonder Woman ',variable=x, onvalue=1, offvalue=0, 
-                        font=('Oswald ',12),bg= 'grey', fg='blue',
+                        font=('Oswald ',12),bg= 'grey', fg='blue',width=220,height=100,
                         activeforeground='red', activebackground='black', image=wophoto, compound = 'right')
 Batbox=tk.Checkbutton(window,text='Batman ',variable=x, onvalue=1, offvalue=0, 
-                        font=('Oswald ',12),bg= 'grey', fg='blue',
+                        font=('Oswald ',12),bg= 'grey', fg='blue',width=175,height=100,
                         activeforeground='red', activebackground='black', image=batphoto, compound = 'right')
 Flashbox=tk.Checkbutton(window,text='Flash ',variable=x, onvalue=1, offvalue=0, 
-                        font=('Oswald ',12),bg= 'grey', fg='blue',
+                        font=('Oswald ',12),bg= 'grey', fg='blue',width=175,height=100,
                         activeforeground='red', activebackground='black', image=flashphoto, compound = 'right')
-Supbox.pack()
-Batbox.pack()
-Flashbox.pack()
-Wobox.pack()
-
+Supbox.place(x=10, y=300)
+Wobox.place(x=220,y=300)
+Batbox.place(x=10, y=415)
+Flashbox.place(x=220, y=415)
 
 def paginabatalla():
     if (x.get())==1 and (usuario.get()!=''):

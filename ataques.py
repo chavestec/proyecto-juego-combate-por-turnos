@@ -16,4 +16,5 @@ def atacar(x,y):
     if y.vida<=0:
         return ('K.O')
     else:
-        return (y.vida)
+        return ((y.vida))
+    

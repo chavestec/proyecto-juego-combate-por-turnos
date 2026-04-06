@@ -50,18 +50,21 @@ wophoto=ImageTk.PhotoImage(wophoto_resize)
 flashphoto_resize=flashphoto_original.resize((100,100))
 flashphoto=ImageTk.PhotoImage(flashphoto_resize)
 
-x=tk.IntVar()
+s=tk.IntVar()
+b=tk.IntVar()
+w=tk.IntVar()
+f=tk.IntVar()
 
-Supbox=tk.Checkbutton(window,text='Superman ',variable=x, onvalue=1, offvalue=0, 
+Supbox=tk.Checkbutton(window,text='Superman ',variable=s, onvalue=1, offvalue=0, 
                         font=('Oswald ',12),bg= 'grey', fg='blue',width=175,height=100, 
                         activeforeground='red', activebackground='black', image=supphoto, compound = 'right')
-Wobox=tk.Checkbutton(window,text='Wonder Woman ',variable=x, onvalue=1, offvalue=0, 
+Wobox=tk.Checkbutton(window,text='Wonder Woman ',variable=w, onvalue=1, offvalue=0, 
                         font=('Oswald ',12),bg= 'grey', fg='blue',width=220,height=100,
                         activeforeground='red', activebackground='black', image=wophoto, compound = 'right')
-Batbox=tk.Checkbutton(window,text='Batman ',variable=x, onvalue=1, offvalue=0, 
+Batbox=tk.Checkbutton(window,text='Batman ',variable=b, onvalue=1, offvalue=0, 
                         font=('Oswald ',12),bg= 'grey', fg='blue',width=175,height=100,
                         activeforeground='red', activebackground='black', image=batphoto, compound = 'right')
-Flashbox=tk.Checkbutton(window,text='Flash ',variable=x, onvalue=1, offvalue=0, 
+Flashbox=tk.Checkbutton(window,text='Flash ',variable=f, onvalue=1, offvalue=0, 
                         font=('Oswald ',12),bg= 'grey', fg='blue',width=175,height=100,
                         activeforeground='red', activebackground='black', image=flashphoto, compound = 'right')
 Supbox.place(x=10, y=300)
@@ -70,12 +73,12 @@ Batbox.place(x=10, y=415)
 Flashbox.place(x=220, y=415)
 
 def paginabatalla():
-    if (x.get())==1 and (usuario.get()!=''):
+    if (s.get())+(w.get())+(b.get())+(f.get())==3 and (usuario.get()!=''):
         window.destroy()
         Ventanabatallas.principalis()
         
-    elif(x.get())==0:
-        recordatorio=tk.Label(window,text=('DEBE SELECCIONAR UN PERSONAJE'), font=('Papyrus',12,'bold'))
+    elif(s.get())+(w.get())+(b.get())+(f.get())!=3:
+        recordatorio=tk.Label(window,text=('DEBE SELECCIONAR TRES PERSONAJE'), font=('Papyrus',12,'bold'))
         recordatorio.pack()
 
         

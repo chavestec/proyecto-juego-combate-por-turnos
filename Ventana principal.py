@@ -9,8 +9,6 @@ def principalis():
     venjuego.title('Batalla')
     info=tk.Label(venjuego,text=('Juego'), font= ('Arial',12))
     info.pack()
-    supcarta=tk.Label(venjuego, text=('Aqui'),font= ('Arial',12))
-    nosupcarta=tk.Label(venjuego, text=('Aqui no'))
     if (s.get())==1:
         supcarta=tk.Label(venjuego, text=('Superman'),font= ('Arial',12),fg='black')
         supcarta.pack()
@@ -22,7 +20,40 @@ def principalis():
         Wondercarta.pack()
     if (f.get())==1:
         flashcarta=tk.Label(venjuego, text=('Flash'),font= ('Arial',12),fg='black')
-        flasharta.pack()      
+        flashcarta.pack()
+    if (g.get())==1:
+        greencarta=tk.Label(venjuego, text=('Green Lantern'),font= ('Arial',12),fg='black')
+        greencarta.pack()
+    if (h.get())==1:
+        hawkcarta=tk.Label(venjuego, text=('Hawkgirl'),font= ('Arial',12),fg='black')
+        hawkcarta.pack()
+    if (mm.get())==1:
+        martiancarta=tk.Label(venjuego, text=('Martian Manhunter'),font= ('Arial',12),fg='black')
+        martiancarta.pack()
+    if (ca.get())==1:
+        canarycarta=tk.Label(venjuego, text=('Black Canary'),font= ('Arial',12),fg='black')
+        canarycarta.pack()
+    if (z.get())==1:
+        zatannacarta=tk.Label(venjuego, text=('Zatanna'),font= ('Arial',12),fg='black')
+        zatannacarta.pack()
+    if (a.get())==1:
+        arrowcarta=tk.Label(venjuego, text=('Green Arrow'),font= ('Arial',12),fg='black')
+        arrowcarta.pack()
+    if (bg.get())==1:
+        goldcarta=tk.Label(venjuego, text=('Booster Gold'),font= ('Arial',12),fg='black')
+        goldcarta.pack()
+    if (m.get())==1:
+        marvelcarta=tk.Label(venjuego, text=('Captain Marvel'),font= ('Arial',12),fg='black')
+        marvelcarta.pack()
+    if (nw.get())==1:
+        marvelcarta=tk.Label(venjuego, text=('Nightwing'),font= ('Arial',12),fg='black')
+        marvelcarta.pack()
+    if (sg.get())==1:
+        supgcarta=tk.Label(venjuego, text=('Supergirl'),font= ('Arial',12),fg='black')
+        supgcarta.pack()
+    if (aq.get())==1:
+        aquacarta=tk.Label(venjuego, text=('Aquaman'),font= ('Arial',12),fg='black')
+        aquacarta.pack()
     venjuego.mainloop()
 #--------------------------------------------------------------------------------
 #VentanaPrincipal
@@ -69,9 +100,41 @@ supphoto_original=Image.open('Supphoto.png')
 batphoto_original=Image.open('Batphoto.png')
 wophoto_original=Image.open('Wonderphoto.png')
 flashphoto_original=Image.open('Flashphoto.png')
+greenphoto_original=Image.open('greenphoto.png')
+hawkphoto_original=Image.open('Hawkphoto.png')
+martianphoto_original=Image.open('Martianphoto.png')
+canaryphoto_original=Image.open('Canaryphoto.png')
+zatannaphoto_original=Image.open('zatannaphoto.png')
+arrowphoto_original=Image.open('arrowphoto.png')
+goldphoto_original=Image.open('goldphoto.png')
+marvelphoto_original=Image.open('marvelphoto.png')
+nightphoto_original=Image.open('nightphoto.png')
+supgphoto_original=Image.open('supgphoto.png')
+aquaphoto_original=Image.open('aquaphoto.png')
 
 supphoto_resize=supphoto_original.resize((100,100))
 supphoto=ImageTk.PhotoImage(supphoto_resize)
+
+supgphoto_resize=supgphoto_original.resize((100,100))
+supgphoto=ImageTk.PhotoImage(supgphoto_resize)
+
+aquaphoto_resize=aquaphoto_original.resize((100,100))
+aquaphoto=ImageTk.PhotoImage(aquaphoto_resize)
+
+nightphoto_resize=nightphoto_original.resize((100,100))
+nightphoto=ImageTk.PhotoImage(nightphoto_resize)
+
+arrowphoto_resize=arrowphoto_original.resize((100,100))
+arrowphoto=ImageTk.PhotoImage(arrowphoto_resize)
+
+goldphoto_resize=goldphoto_original.resize((100,100))
+goldphoto=ImageTk.PhotoImage(goldphoto_resize)
+
+martianphoto_resize=martianphoto_original.resize((100,100))
+martianphoto=ImageTk.PhotoImage(martianphoto_resize)
+
+zatannaphoto_resize=zatannaphoto_original.resize((100,100))
+zatannaphoto=ImageTk.PhotoImage(zatannaphoto_resize)
 
 batphoto_resize=batphoto_original.resize((100,100))
 batphoto=ImageTk.PhotoImage(batphoto_resize)
@@ -82,34 +145,101 @@ wophoto=ImageTk.PhotoImage(wophoto_resize)
 flashphoto_resize=flashphoto_original.resize((100,100))
 flashphoto=ImageTk.PhotoImage(flashphoto_resize)
 
+greenphoto_resize=greenphoto_original.resize((100,100))
+greenphoto=ImageTk.PhotoImage(greenphoto_resize)
+
+hawkphoto_resize=hawkphoto_original.resize((100,100))
+hawkphoto=ImageTk.PhotoImage(hawkphoto_resize)
+
+canaryphoto_resize=canaryphoto_original.resize((100,100))
+canaryphoto=ImageTk.PhotoImage(canaryphoto_resize)
+
+marvelphoto_resize=marvelphoto_original.resize((100,100))
+marvelphoto=ImageTk.PhotoImage(marvelphoto_resize)
+
 s=tk.IntVar()
 b=tk.IntVar()
 w=tk.IntVar()
 f=tk.IntVar()
+g=tk.IntVar()
+h=tk.IntVar()
+mm=tk.IntVar()
+ca=tk.IntVar()
+z=tk.IntVar()
+a=tk.IntVar()
+bg=tk.IntVar()
+m=tk.IntVar()
+nw=tk.IntVar()
+sg=tk.IntVar()
+aq=tk.IntVar()
 
 Supbox=tk.Checkbutton(window,text='Superman ',variable=s, onvalue=1, offvalue=0, 
-                        font=('Oswald ',12),bg= 'grey', fg='blue',width=175,height=100, 
+                        font=('Oswald ',12),bg= 'grey', fg='black',width=175,height=100, 
                         activeforeground='red', activebackground='black', image=supphoto, compound = 'right')
 Wobox=tk.Checkbutton(window,text='Wonder Woman ',variable=w, onvalue=1, offvalue=0, 
-                        font=('Oswald ',12),bg= 'grey', fg='blue',width=220,height=100,
+                        font=('Oswald ',12),bg= 'grey', fg='black',width=220,height=100,
                         activeforeground='red', activebackground='black', image=wophoto, compound = 'right')
 Batbox=tk.Checkbutton(window,text='Batman ',variable=b, onvalue=1, offvalue=0, 
-                        font=('Oswald ',12),bg= 'grey', fg='blue',width=175,height=100,
+                        font=('Oswald ',12),bg= 'grey', fg='black',width=175,height=100,
                         activeforeground='red', activebackground='black', image=batphoto, compound = 'right')
 Flashbox=tk.Checkbutton(window,text='Flash ',variable=f, onvalue=1, offvalue=0, 
-                        font=('Oswald ',12),bg= 'grey', fg='blue',width=175,height=100,
+                        font=('Oswald ',12),bg= 'grey', fg='black',width=175,height=100,
                         activeforeground='red', activebackground='black', image=flashphoto, compound = 'right')
+Greenbox=tk.Checkbutton(window,text='Green Lantern ',variable=g, onvalue=1, offvalue=0, 
+                        font=('Oswald ',12),bg= 'grey', fg='black',width=210,height=100,
+                        activeforeground='red', activebackground='black', image=greenphoto, compound = 'right')
+Hawkbox=tk.Checkbutton(window,text='Hawkgirl ',variable=h, onvalue=1, offvalue=0, 
+                        font=('Oswald ',12),bg= 'grey', fg='black',width=175,height=100,
+                        activeforeground='red', activebackground='black', image=hawkphoto, compound = 'right')
+Martianbox=tk.Checkbutton(window,text='Martian Manhunter ',variable=mm, onvalue=1, offvalue=0, 
+                        font=('Oswald ',12),bg= 'grey', fg='black',width=230,height=100,
+                        activeforeground='red', activebackground='black', image=martianphoto, compound = 'right')
+Canarybox=tk.Checkbutton(window,text='Black Canary ',variable=ca, onvalue=1, offvalue=0, 
+                        font=('Oswald ',12),bg= 'grey', fg='black',width=205,height=100,
+                        activeforeground='red', activebackground='black', image=canaryphoto, compound = 'right')
+Zatannabox=tk.Checkbutton(window,text='Zatanna ',variable=z, onvalue=1, offvalue=0, 
+                        font=('Oswald ',12),bg= 'grey', fg='black',width=175,height=100,
+                        activeforeground='red', activebackground='black', image=zatannaphoto, compound = 'right')
+Arrowbox=tk.Checkbutton(window,text='Green Arrow ',variable=a, onvalue=1, offvalue=0, 
+                        font=('Oswald ',12),bg= 'grey', fg='black',width=190,height=100,
+                        activeforeground='red', activebackground='black', image=arrowphoto, compound = 'right')
+Goldbox=tk.Checkbutton(window,text='Booster Gold ',variable=bg, onvalue=1, offvalue=0, 
+                        font=('Oswald ',12),bg= 'grey', fg='black',width=200,height=100,
+                        activeforeground='red', activebackground='black', image=goldphoto, compound = 'right')
+Marvelbox=tk.Checkbutton(window,text='Captain Marvel ',variable=m, onvalue=1, offvalue=0, 
+                        font=('Oswald ',12),bg= 'grey', fg='black',width=210,height=100,
+                        activeforeground='red', activebackground='black', image=marvelphoto, compound = 'right')
+Nightbox=tk.Checkbutton(window,text='Nightwing ',variable=nw, onvalue=1, offvalue=0, 
+                        font=('Oswald ',12),bg= 'grey', fg='black',width=170,height=100,
+                        activeforeground='red', activebackground='black', image=nightphoto, compound = 'right')
+Supgbox=tk.Checkbutton(window,text='Supergirl ',variable=sg, onvalue=1, offvalue=0, 
+                        font=('Oswald ',12),bg= 'grey', fg='black',width=175,height=100, 
+                        activeforeground='red', activebackground='black', image=supgphoto, compound = 'right')
+Aquabox=tk.Checkbutton(window,text='Aquaman ',variable=aq, onvalue=1, offvalue=0, 
+                        font=('Oswald ',12),bg= 'grey', fg='black',width=175,height=100, 
+                        activeforeground='red', activebackground='black', image=aquaphoto, compound = 'right')
 Supbox.place(x=10, y=300)
 Wobox.place(x=220,y=300)
 Batbox.place(x=10, y=415)
 Flashbox.place(x=220, y=415)
-
-
+Greenbox.place(x=475, y=300)
+Hawkbox.place(x=430 ,y=415)
+Martianbox.place(x= 640 ,y=415)
+Canarybox.place(x= 905 ,y=415)
+Zatannabox.place(x= 720 ,y=300)
+Arrowbox.place(x= 1145 ,y=415)
+Goldbox.place(x= 930 ,y=300)
+Marvelbox.place(x= 1165 ,y=300)
+Nightbox.place(x= 570 ,y=530)
+Supgbox.place(x= 360 ,y=530)
+Aquabox.place(x= 775 ,y=530)
     
 def paginabatalla():
-    sumapersonajes=(s.get())+(w.get())+(b.get())+(f.get())
+    sumapersonajes=(s.get())+(w.get())+(b.get())+(f.get()+(g.get())+(h.get())+(mm.get())+(ca.get())+(z.get())+(a.get())+(bg.get())+(m.get())+(nw.get())+
+                                                  (sg.get())+(aq.get()))
     if sumapersonajes==3:
         if (usuario.get()!=''):
+            window.withdraw()
             principalis()
         else:
             recordatorio=tk.Label(window,text=('DEBE ESCRIBIR SU NOMBRE, NOBLE JUGADOR'), font=('Papyrus',12,'bold'), bg='Black', fg='white')

@@ -64,27 +64,45 @@ def principalis():
         seleccion=tk.Label(venjuegos, text=('Personajes villanos'))
         seleccion.pack()
 
-    ubicaciones=['Patio Pricipal','Sala Entrenamiento','Salon Justicia','Puesto de vigilancia', 'Atalaya']
-    
-    def ubicacion_seleccionado():
-        if (ub.get())==0:
-            print('Opción 1')
-        elif (ub.get())==1:
-            print('Opción 2')
-        elif (ub.get())==2:
-            print('Opción 3')
-    
-    canvasmapa=tk.Canvas(venjuego,bg='grey')
-    mapatitulo=tk.Label(canvasmapa, text=('Mapa'),font=('Papyrus',12))
-    mapatitulo.pack()
-    ub=tk.IntVar()
-    for index in range(len(ubicaciones)):
-        mapa=tk.Radiobutton(canvasmapa,text=ubicaciones[index],variable=ub,value=index,font=('Papyrus',12),
-                                     command=ubicacion_seleccionado)
-        mapa.pack(anchor='w')
-    
-    canvasmapa.place(x=0,y=0)
+    canvasmapa=tk.Canvas(venjuego,bg='grey',width=300,height=300)
+    mapatitulo=tk.Label(canvasmapa, text=('Mapa'),font=('Papyrus',12),bg='grey')
+    mapatitulo.place(x=120,y=10)
+
+    def volver():
+        boton_mapa.lift()
+        texto_ubicacion_uno.lift()
+
+    def siguiente_4():
+        texto_ubicacion_uno=tk.Label(venjuego,text=('Atalaya                                       '),bg='grey',font=('Papyrus',12), compound='bottom')
+        texto_ubicacion_uno.place(x=100,y=200)
+        boton_mapa_4=tk.Button(canvasmapa, text='Siguiente',command=volver)
+        boton_mapa_4.place(x=115,y=230)
+    def siguiente_3():
+        texto_ubicacion_uno=tk.Label(venjuego,text=('Sala de Entrenamiento'),bg='grey',font=('Papyrus',12), compound='bottom')
+        texto_ubicacion_uno.place(x=100,y=200)
+        boton_mapa_4=tk.Button(canvasmapa, text='Siguiente',command=siguiente_4)
+        boton_mapa_4.place(x=115,y=230)
+
+    def siguiente_2():
+        texto_ubicacion_uno=tk.Label(venjuego,text=('Sala de Reuniones'),bg='grey',font=('Papyrus',12), compound='bottom')
+        texto_ubicacion_uno.place(x=100,y=200)
+        boton_mapa_3=tk.Button(canvasmapa, text='Siguiente',command=siguiente_3)
+        boton_mapa_3.place(x=115,y=230)
         
+    def siguiente_1():
+        
+        texto_ubicacion_uno=tk.Label(venjuego,text=('Salón de la Justicia'),bg='grey',font=('Papyrus',12), compound='bottom')
+        texto_ubicacion_uno.place(x=100,y=200)
+        boton_mapa_2=tk.Button(canvasmapa, text='Siguiente',command=siguiente_2)
+        boton_mapa_2.place(x=115,y=230)
+
+        
+    boton_mapa=tk.Button(canvasmapa, text='Siguiente',command=siguiente_1)
+    boton_mapa.place(x=115,y=230)
+    texto_ubicacion_uno=tk.Label(venjuego,text=('Patio Principal'),bg='grey',font=('Papyrus',12), compound='bottom')
+    texto_ubicacion_uno.place(x=100,y=200)
+
+    canvasmapa.place(x=0,y=0)
         
    
     info=tk.Label(venjuego,text=('Juego'), font= ('Arial',12))

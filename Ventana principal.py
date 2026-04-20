@@ -7,53 +7,91 @@ def principalis():
     venjuego.geometry('1500x700')
     venjuego.resizable(False,False)
     venjuego.title('Batalla')
+    def jugables():
+        seleccion=tk.Canvas(venjuego, width=200, height=200)
+        seleccion.pack()
+        seleccionados=tk.Label(seleccion, text=('Personajes escogidos'))
+        seleccionados.pack()
+        if (s.get())==1:
+            supcarta=tk.Label(seleccion, text=('Superman'),font= ('Arial',12),fg='black')
+            supcarta.pack()
+        elif (s.get())==0:
+            supcarta=tk.Label(seleccion, text=('Superman malo'),font= ('Arial',12),fg='black')
+            supcarta.pack()
+        if (b.get())==1:
+            batcarta=tk.Label(seleccion, text=('Batman'),font= ('Arial',12),fg='black')
+            batcarta.pack()
+        if (w.get())==1:
+            Wondercarta=tk.Label(seleccion, text=('Wonder Woman'),font= ('Arial',12),fg='black')
+            Wondercarta.pack()
+        if (f.get())==1:
+            flashcarta=tk.Label(seleccion, text=('Flash'),font= ('Arial',12),fg='black')
+            flashcarta.pack()
+        if (g.get())==1:
+            greencarta=tk.Label(seleccion, text=('Green Lantern'),font= ('Arial',12),fg='black')
+            greencarta.pack()
+        if (h.get())==1:
+            hawkcarta=tk.Label(seleccion, text=('Hawkgirl'),font= ('Arial',12),fg='black')
+            hawkcarta.pack()
+        if (mm.get())==1:
+            martiancarta=tk.Label(seleccion, text=('Martian Manhunter'),font= ('Arial',12),fg='black')
+            martiancarta.pack()
+        if (ca.get())==1:
+            canarycarta=tk.Label(seleccion, text=('Black Canary'),font= ('Arial',12),fg='black')
+            canarycarta.pack()
+        if (z.get())==1:
+            zatannacarta=tk.Label(seleccion, text=('Zatanna'),font= ('Arial',12),fg='black')
+            zatannacarta.pack()
+        if (a.get())==1:
+            arrowcarta=tk.Label(seleccion, text=('Green Arrow'),font= ('Arial',12),fg='black')
+            arrowcarta.pack()
+        if (bg.get())==1:
+            goldcarta=tk.Label(seleccion, text=('Booster Gold'),font= ('Arial',12),fg='black')
+            goldcarta.pack()
+        if (m.get())==1:
+            marvelcarta=tk.Label(seleccion, text=('Captain Marvel'),font= ('Arial',12),fg='black')
+            marvelcarta.pack()
+        if (nw.get())==1:
+            marvelcarta=tk.Label(seleccion, text=('Nightwing'),font= ('Arial',12),fg='black')
+            marvelcarta.pack()
+        if (sg.get())==1:
+            supgcarta=tk.Label(seleccion, text=('Supergirl'),font= ('Arial',12),fg='black')
+            supgcarta.pack()
+        if (aq.get())==1:
+            aquacarta=tk.Label(seleccion, text=('Aquaman'),font= ('Arial',12),fg='black')
+            aquacarta.pack()
+    def villanos():
+        seleccion=tk.Label(venjuegos, text=('Personajes villanos'))
+        seleccion.pack()
+
+    ubicaciones=['Patio Pricipal','Sala Entrenamiento','Salon Justicia','Puesto de vigilancia', 'Atalaya']
+    
+    def ubicacion_seleccionado():
+        if (ub.get())==0:
+            print('Opción 1')
+        elif (ub.get())==1:
+            print('Opción 2')
+        elif (ub.get())==2:
+            print('Opción 3')
+    
+    canvasmapa=tk.Canvas(venjuego,bg='grey')
+    mapatitulo=tk.Label(canvasmapa, text=('Mapa'),font=('Papyrus',12))
+    mapatitulo.pack()
+    ub=tk.IntVar()
+    for index in range(len(ubicaciones)):
+        mapa=tk.Radiobutton(canvasmapa,text=ubicaciones[index],variable=ub,value=index,font=('Papyrus',12),
+                                     command=ubicacion_seleccionado)
+        mapa.pack(anchor='w')
+    
+    canvasmapa.place(x=0,y=0)
+        
+        
+   
     info=tk.Label(venjuego,text=('Juego'), font= ('Arial',12))
     info.pack()
-    if (s.get())==1:
-        supcarta=tk.Label(venjuego, text=('Superman'),font= ('Arial',12),fg='black')
-        supcarta.pack()
-    if (b.get())==1:
-        batcarta=tk.Label(venjuego, text=('Batman'),font= ('Arial',12),fg='black')
-        batcarta.pack()
-    if (w.get())==1:
-        Wondercarta=tk.Label(venjuego, text=('Wonder Woman'),font= ('Arial',12),fg='black')
-        Wondercarta.pack()
-    if (f.get())==1:
-        flashcarta=tk.Label(venjuego, text=('Flash'),font= ('Arial',12),fg='black')
-        flashcarta.pack()
-    if (g.get())==1:
-        greencarta=tk.Label(venjuego, text=('Green Lantern'),font= ('Arial',12),fg='black')
-        greencarta.pack()
-    if (h.get())==1:
-        hawkcarta=tk.Label(venjuego, text=('Hawkgirl'),font= ('Arial',12),fg='black')
-        hawkcarta.pack()
-    if (mm.get())==1:
-        martiancarta=tk.Label(venjuego, text=('Martian Manhunter'),font= ('Arial',12),fg='black')
-        martiancarta.pack()
-    if (ca.get())==1:
-        canarycarta=tk.Label(venjuego, text=('Black Canary'),font= ('Arial',12),fg='black')
-        canarycarta.pack()
-    if (z.get())==1:
-        zatannacarta=tk.Label(venjuego, text=('Zatanna'),font= ('Arial',12),fg='black')
-        zatannacarta.pack()
-    if (a.get())==1:
-        arrowcarta=tk.Label(venjuego, text=('Green Arrow'),font= ('Arial',12),fg='black')
-        arrowcarta.pack()
-    if (bg.get())==1:
-        goldcarta=tk.Label(venjuego, text=('Booster Gold'),font= ('Arial',12),fg='black')
-        goldcarta.pack()
-    if (m.get())==1:
-        marvelcarta=tk.Label(venjuego, text=('Captain Marvel'),font= ('Arial',12),fg='black')
-        marvelcarta.pack()
-    if (nw.get())==1:
-        marvelcarta=tk.Label(venjuego, text=('Nightwing'),font= ('Arial',12),fg='black')
-        marvelcarta.pack()
-    if (sg.get())==1:
-        supgcarta=tk.Label(venjuego, text=('Supergirl'),font= ('Arial',12),fg='black')
-        supgcarta.pack()
-    if (aq.get())==1:
-        aquacarta=tk.Label(venjuego, text=('Aquaman'),font= ('Arial',12),fg='black')
-        aquacarta.pack()
+    return jugables()
+    return villanos()
+        
     venjuego.mainloop()
 #--------------------------------------------------------------------------------
 #VentanaPrincipal
@@ -76,7 +114,7 @@ def prograbotonuser():
     user=usuario.get()
     if user!='':
         bienvenido.config(text=('Bienvenido'), font=('Papyrus',18))
-        usuariovisible.config(text=user,font=('Papyrus',18))
+        usuariovisible.config(text= 'Super-'+user,font=('Papyrus',18))
     else:
         ''
     
@@ -92,6 +130,40 @@ usuariovisible=tk.Label(window)
 bienvenido=tk.Label(window)
 bienvenido.place(x=10,y=50)
 usuariovisible.place(x=10, y=100)
+
+#--------------------------------------------#Selecciondeavatar--------------------------------------------------------------------------------------------------
+canvavatar=tk.Canvas(window)
+textoavatar=tk.Label(window,text='Seleccione su avatar', font=('Papyrus',14))
+textoavatar.place(x=1150, y=30)
+opcionuno=Image.open('opcionuno.png')
+avataruno=opcionuno.resize((50,50))
+uno=ImageTk.PhotoImage(avataruno)
+
+opciondos=Image.open('opcion2.png')
+avatardos=opciondos.resize((50,50))
+dos=ImageTk.PhotoImage(avatardos)
+
+opciontres=Image.open('proteger.png')
+avatartres=opciontres.resize((50,50))
+tres=ImageTk.PhotoImage(avatartres)
+
+def avatar_seleccionado():
+    if (av.get())==0:
+        print('Opción 1')
+    elif (av.get())==1:
+        print('Opción 2')
+    elif (av.get())==2:
+        print('Opción 3')
+avatares=['Opción 1','Opción 2','Opción 3']
+avataresimagenes=[uno,dos,tres]
+av=tk.IntVar()
+for index in range(len(avatares)):
+    seleccionavatares=tk.Radiobutton(canvavatar,text=avatares[index],variable=av,value=index,font=('Papyrus',12),
+                                     command=avatar_seleccionado,
+                                     image=avataresimagenes[index])
+    seleccionavatares.pack()
+canvavatar.place(x=1200,y=70)
+
 
         
 
@@ -253,15 +325,7 @@ def paginabatalla():
         
 iniciar=tk.Button(window, text='Iniciar', font=('Papyrus',12),command=paginabatalla)
 
-iniciar.pack()
+iniciar.place(x=720,y=200)
 window.mainloop()
 
 #----------------------------------------------------------------------------------------------------------------------------------------------------------
-
-        
-
-
-
-
-
-

@@ -3,7 +3,7 @@ import tkinter as tk
 from PIL import Image, ImageTk
 #----------------VentanaBatallas-------------------------------------------------------------------------------------------------------------------------
 def principalis():
-    venjuego=tk.Tk()
+    venjuego=tk.Toplevel()
     venjuego.geometry('1500x700')
     venjuego.resizable(False,False)
     venjuego.title('Batalla')
@@ -103,7 +103,29 @@ def principalis():
     texto_ubicacion_uno.place(x=100,y=200)
 
     canvasmapa.place(x=0,y=0)
-        
+    canvasmenu=tk.Canvas(venjuego,bg='grey',width=300,height=300)
+    nombre=tk.Label(canvasmenu,text=('Super-'+(usuario.get())), font=('Papyrus',14), bg='grey')
+    nombre.place(x=80,y=10)
+    if (av.get())==0:
+        opcionuno=Image.open('opcionuno_dos.png')
+        avataruno=opcionuno.resize((50,50))
+        uno=ImageTk.PhotoImage(avataruno)
+        canvasmenu.create_image(10,10,image=uno,anchor=tk.NW)
+        canvasmenu.image=uno
+    elif (av.get())==1:
+        opcionuno=Image.open('opcion2.png')
+        avataruno=opcionuno.resize((50,50))
+        uno=ImageTk.PhotoImage(avataruno)
+        canvasmenu.create_image(10,10,image=uno,anchor=tk.NW)
+        canvasmenu.image=uno
+    elif (av.get())==2:
+        opcionuno=Image.open('proteger.png')
+        avataruno=opcionuno.resize((50,50))
+        uno=ImageTk.PhotoImage(avataruno)
+        canvasmenu.create_image(10,10,image=uno,anchor=tk.NW)
+        canvasmenu.image=uno
+    canvasmenu.place(x=0, y=310)
+       
    
     info=tk.Label(venjuego,text=('Juego'), font= ('Arial',12))
     info.pack()
@@ -140,7 +162,7 @@ def prograbotonuser():
 botonuser=tk.Button(window,text=('Aceptar'), font=('Papyrus',12),command=prograbotonuser)
 
 usuario = tk.Entry()
-usuario.config(font=('Papyrus',12))
+usuario.config(font=('Papyrus',14))
 usuario.pack()
 botonuser.pack()
 usuariovisible=tk.Label(window)

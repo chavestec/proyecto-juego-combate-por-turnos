@@ -4,7 +4,7 @@ from PIL import Image, ImageTk
 #----------------VentanaBatallas-------------------------------------------------------------------------------------------------------------------------
 def principalis():
     venjuego=tk.Toplevel()
-    venjuego.geometry('1500x700')
+    venjuego.geometry('1500x675')
     venjuego.resizable(False,False)
     venjuego.title('Batalla')
     def jugables():
@@ -12,57 +12,94 @@ def principalis():
         seleccion.pack()
         seleccionados=tk.Label(seleccion, text=('Personajes escogidos'))
         seleccionados.pack()
+
+        canvaspersonaje=tk.Canvas(venjuego,bg='grey',width=300,height=300)
+        canvaspersonaje.place(x=310, y=310)
+
+        
         if (s.get())==1:
-            supcarta=tk.Label(seleccion, text=('Superman'),font= ('Arial',12),fg='black')
-            supcarta.pack()
-        elif (s.get())==0:
-            supcarta=tk.Label(seleccion, text=('Superman malo'),font= ('Arial',12),fg='black')
-            supcarta.pack()
+            Supbox=tk.Checkbutton(canvaspersonaje,text='Superman ',variable=s, onvalue=1, offvalue=0, 
+                        font=('Oswald ',12),bg= 'grey', fg='black',width=175,height=100, 
+                        activeforeground='red', activebackground='black', image=supphoto, compound = 'right')
+            Supbox.pack()
+        
         if (b.get())==1:
-            batcarta=tk.Label(seleccion, text=('Batman'),font= ('Arial',12),fg='black')
-            batcarta.pack()
+            Batbox=tk.Checkbutton(canvaspersonaje,text='Batman ',variable=b, onvalue=1, offvalue=0, 
+                        font=('Oswald ',12),bg= 'grey', fg='black',width=175,height=100,
+                        activeforeground='red', activebackground='black', image=batphoto, compound = 'right')
+            Batbox.pack()
         if (w.get())==1:
-            Wondercarta=tk.Label(seleccion, text=('Wonder Woman'),font= ('Arial',12),fg='black')
-            Wondercarta.pack()
+            Wobox=tk.Checkbutton(canvaspersonaje,text='Wonder Woman ',variable=w, onvalue=1, offvalue=0, 
+                        font=('Oswald ',12),bg= 'grey', fg='black',width=220,height=100,
+                        activeforeground='red', activebackground='black', image=wophoto, compound = 'right')
+            Wobox.pack()
         if (f.get())==1:
-            flashcarta=tk.Label(seleccion, text=('Flash'),font= ('Arial',12),fg='black')
-            flashcarta.pack()
+            Flashbox=tk.Checkbutton(canvaspersonaje,text='Flash ',variable=f, onvalue=1, offvalue=0, 
+                        font=('Oswald ',12),bg= 'grey', fg='black',width=175,height=100,
+                        activeforeground='red', activebackground='black', image=flashphoto, compound = 'right')
+            Flashbox.pack()
         if (g.get())==1:
-            greencarta=tk.Label(seleccion, text=('Green Lantern'),font= ('Arial',12),fg='black')
-            greencarta.pack()
+            Greenbox=tk.Checkbutton(canvaspersonaje,text='Green Lantern ',variable=g, onvalue=1, offvalue=0, 
+                        font=('Oswald ',12),bg= 'grey', fg='black',width=210,height=100,
+                        activeforeground='red', activebackground='black', image=greenphoto, compound = 'right')
+            Greenbox.pack()
         if (h.get())==1:
-            hawkcarta=tk.Label(seleccion, text=('Hawkgirl'),font= ('Arial',12),fg='black')
-            hawkcarta.pack()
+            Hawkbox=tk.Checkbutton(canvaspersonaje,text='Hawkgirl ',variable=h, onvalue=1, offvalue=0, 
+                        font=('Oswald ',12),bg= 'grey', fg='black',width=175,height=100,
+                        activeforeground='red', activebackground='black', image=hawkphoto, compound = 'right')
+            Hawkbox.pack()
         if (mm.get())==1:
             martiancarta=tk.Label(seleccion, text=('Martian Manhunter'),font= ('Arial',12),fg='black')
             martiancarta.pack()
+            Martianbox=tk.Checkbutton(canvaspersonaje,text='Martian Manhunter ',variable=mm, onvalue=1, offvalue=0, 
+                        font=('Oswald ',12),bg= 'grey', fg='black',width=230,height=100,
+                        activeforeground='red', activebackground='black', image=martianphoto, compound = 'right')
+            Martianbox.pack()
         if (ca.get())==1:
-            canarycarta=tk.Label(seleccion, text=('Black Canary'),font= ('Arial',12),fg='black')
-            canarycarta.pack()
+            Canarybox=tk.Checkbutton(canvaspersonaje,text='Black Canary ',variable=ca, onvalue=1, offvalue=0, 
+                        font=('Oswald ',12),bg= 'grey', fg='black',width=205,height=100,
+                        activeforeground='red', activebackground='black', image=canaryphoto, compound = 'right')
+            Canarybox.pack()
         if (z.get())==1:
-            zatannacarta=tk.Label(seleccion, text=('Zatanna'),font= ('Arial',12),fg='black')
-            zatannacarta.pack()
+            Zatannabox=tk.Checkbutton(canvaspersonaje,text='Zatanna ',variable=z, onvalue=1, offvalue=0, 
+                        font=('Oswald ',12),bg= 'grey', fg='black',width=175,height=100,
+                        activeforeground='red', activebackground='black', image=zatannaphoto, compound = 'right')
+            Zatannabox.pack()
         if (a.get())==1:
-            arrowcarta=tk.Label(seleccion, text=('Green Arrow'),font= ('Arial',12),fg='black')
-            arrowcarta.pack()
+            Arrowbox=tk.Checkbutton(canvaspersonaje,text='Green Arrow ',variable=a, onvalue=1, offvalue=0, 
+                        font=('Oswald ',12),bg= 'grey', fg='black',width=190,height=100,
+                        activeforeground='red', activebackground='black', image=arrowphoto, compound = 'right')
+            Arrowbox.pack()
         if (bg.get())==1:
-            goldcarta=tk.Label(seleccion, text=('Booster Gold'),font= ('Arial',12),fg='black')
-            goldcarta.pack()
+            Goldbox=tk.Checkbutton(canvaspersonaje,text='Booster Gold ',variable=bg, onvalue=1, offvalue=0, 
+                        font=('Oswald ',12),bg= 'grey', fg='black',width=200,height=100,
+                        activeforeground='red', activebackground='black', image=goldphoto, compound = 'right')
+            Goldbox.pack()
         if (m.get())==1:
-            marvelcarta=tk.Label(seleccion, text=('Captain Marvel'),font= ('Arial',12),fg='black')
-            marvelcarta.pack()
+            Marvelbox=tk.Checkbutton(canvaspersonaje,text='Captain Marvel ',variable=m, onvalue=1, offvalue=0, 
+                        font=('Oswald ',12),bg= 'grey', fg='black',width=210,height=100,
+                        activeforeground='red', activebackground='black', image=marvelphoto, compound = 'right')
+            Marvelbox.pack()
+            
         if (nw.get())==1:
-            marvelcarta=tk.Label(seleccion, text=('Nightwing'),font= ('Arial',12),fg='black')
-            marvelcarta.pack()
+            Nightbox=tk.Checkbutton(canvaspersonaje,text='Nightwing ',variable=nw, onvalue=1, offvalue=0, 
+                        font=('Oswald ',12),bg= 'grey', fg='black',width=170,height=100,
+                        activeforeground='red', activebackground='black', image=nightphoto, compound = 'right')
+            Nightbox.pack()
         if (sg.get())==1:
-            supgcarta=tk.Label(seleccion, text=('Supergirl'),font= ('Arial',12),fg='black')
-            supgcarta.pack()
+            Supgbox=tk.Checkbutton(canvaspersonaje,text='Supergirl ',variable=sg, onvalue=1, offvalue=0, 
+                        font=('Oswald ',12),bg= 'grey', fg='black',width=175,height=100, 
+                        activeforeground='red', activebackground='black', image=supgphoto, compound = 'right')
+            Supgbox.pack()
         if (aq.get())==1:
-            aquacarta=tk.Label(seleccion, text=('Aquaman'),font= ('Arial',12),fg='black')
-            aquacarta.pack()
+            Aquabox=tk.Checkbutton(canvaspersonaje,text='Aquaman ',variable=aq, onvalue=1, offvalue=0, 
+                        font=('Oswald ',12),bg= 'grey', fg='black',width=175,height=100, 
+                        activeforeground='red', activebackground='black', image=aquaphoto, compound = 'right')
+            Aquabox.pack()
     def villanos():
         seleccion=tk.Label(venjuegos, text=('Personajes villanos'))
         seleccion.pack()
+    
 
     canvasmapa=tk.Canvas(venjuego,bg='grey',width=300,height=300)
     mapatitulo=tk.Label(canvasmapa, text=('Mapa'),font=('Papyrus',12),bg='grey')
@@ -71,41 +108,74 @@ def principalis():
     def volver():
         boton_mapa.lift()
         texto_ubicacion_uno.lift()
+        fonduno_original=Image.open('fondo.png')
+        fonduno_resize=fonduno_original.resize((130,130))
+        fonduno=ImageTk.PhotoImage(fonduno_resize)
+        canvasmapa.create_image(80,50,image=fonduno,anchor=tk.NW)
+        canvasmapa.image=fonduno
 
     def siguiente_4():
         texto_ubicacion_uno=tk.Label(venjuego,text=('Atalaya                                       '),bg='grey',font=('Papyrus',12), compound='bottom')
         texto_ubicacion_uno.place(x=100,y=200)
         boton_mapa_4=tk.Button(canvasmapa, text='Siguiente',command=volver)
         boton_mapa_4.place(x=115,y=230)
+        fonata_original=Image.open('fonata.png')
+        fonata_resize=fonata_original.resize((130,130))
+        fonata=ImageTk.PhotoImage(fonata_resize)
+        canvasmapa.create_image(80,50,image=fonata,anchor=tk.NW)
+        canvasmapa.image=fonata
     def siguiente_3():
         texto_ubicacion_uno=tk.Label(venjuego,text=('Sala de Entrenamiento'),bg='grey',font=('Papyrus',12), compound='bottom')
         texto_ubicacion_uno.place(x=100,y=200)
         boton_mapa_4=tk.Button(canvasmapa, text='Siguiente',command=siguiente_4)
         boton_mapa_4.place(x=115,y=230)
+        fondos_original=Image.open('fondos.png')
+        fondos_resize=fondos_original.resize((130,130))
+        fondos=ImageTk.PhotoImage(fondos_resize)
+        canvasmapa.create_image(80,50,image=fondos,anchor=tk.NW)
+        canvasmapa.image=fondos
 
     def siguiente_2():
         texto_ubicacion_uno=tk.Label(venjuego,text=('Sala de Reuniones'),bg='grey',font=('Papyrus',12), compound='bottom')
         texto_ubicacion_uno.place(x=100,y=200)
         boton_mapa_3=tk.Button(canvasmapa, text='Siguiente',command=siguiente_3)
         boton_mapa_3.place(x=115,y=230)
+        fontres_original=Image.open('fontres.png')
+        fontres_resize=fontres_original.resize((130,130))
+        fontres=ImageTk.PhotoImage(fontres_resize)
+        canvasmapa.create_image(80,50,image=fontres,anchor=tk.NW)
+        canvasmapa.image=fontres
         
     def siguiente_1():
-        
         texto_ubicacion_uno=tk.Label(venjuego,text=('Salón de la Justicia'),bg='grey',font=('Papyrus',12), compound='bottom')
         texto_ubicacion_uno.place(x=100,y=200)
         boton_mapa_2=tk.Button(canvasmapa, text='Siguiente',command=siguiente_2)
         boton_mapa_2.place(x=115,y=230)
+        foncu_original=Image.open('foncu.png')
+        foncu_resize=foncu_original.resize((130,130))
+        foncu=ImageTk.PhotoImage(foncu_resize)
+        canvasmapa.create_image(80,50,image=foncu,anchor=tk.NW)
+        canvasmapa.image=foncu
 
         
     boton_mapa=tk.Button(canvasmapa, text='Siguiente',command=siguiente_1)
     boton_mapa.place(x=115,y=230)
     texto_ubicacion_uno=tk.Label(venjuego,text=('Patio Principal'),bg='grey',font=('Papyrus',12), compound='bottom')
     texto_ubicacion_uno.place(x=100,y=200)
-
     canvasmapa.place(x=0,y=0)
+    fonduno_original=Image.open('fondo.png')
+    fonduno_resize=fonduno_original.resize((130,130))
+    fonduno=ImageTk.PhotoImage(fonduno_resize)
+    canvasmapa.create_image(80,50,image=fonduno,anchor=tk.NW)
+    canvasmapa.image=fonduno
+
+    
     canvasmenu=tk.Canvas(venjuego,bg='grey',width=300,height=300)
     nombre=tk.Label(canvasmenu,text=('Super-'+(usuario.get())), font=('Papyrus',14), bg='grey')
     nombre.place(x=80,y=10)
+
+    
+        
     if (av.get())==0:
         opcionuno=Image.open('opcionuno_dos.png')
         avataruno=opcionuno.resize((50,50))
@@ -345,7 +415,8 @@ Marvelbox.place(x= 1165 ,y=300)
 Nightbox.place(x= 570 ,y=530)
 Supgbox.place(x= 360 ,y=530)
 Aquabox.place(x= 775 ,y=530)
-    
+
+
 def paginabatalla():
     sumapersonajes=(s.get())+(w.get())+(b.get())+(f.get()+(g.get())+(h.get())+(mm.get())+(ca.get())+(z.get())+(a.get())+(bg.get())+(m.get())+(nw.get())+
                                                   (sg.get())+(aq.get()))

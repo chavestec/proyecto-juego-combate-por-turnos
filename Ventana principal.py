@@ -1,4 +1,5 @@
-import funcionabout 
+import funcionabout
+import random
 import tkinter as tk
 from PIL import Image, ImageTk
 #----------------VentanaBatallas-------------------------------------------------------------------------------------------------------------------------
@@ -7,102 +8,287 @@ def principalis():
     venjuego.geometry('1500x675')
     venjuego.resizable(False,False)
     venjuego.title('Batalla')
-    def jugables():
-        seleccion=tk.Canvas(venjuego, width=200, height=200)
-        seleccion.pack()
-        seleccionados=tk.Label(seleccion, text=('Personajes escogidos'))
-        seleccionados.pack()
-
-        canvaspersonaje=tk.Canvas(venjuego,bg='grey',width=300,height=300)
-        canvaspersonaje.place(x=310, y=310)
-
-        
-        if (s.get())==1:
-            Supbox=tk.Checkbutton(canvaspersonaje,text='Superman ',variable=s, onvalue=1, offvalue=0, 
-                        font=('Oswald ',12),bg= 'grey', fg='black',width=175,height=100, 
-                        activeforeground='red', activebackground='black', image=supphoto, compound = 'right')
-            Supbox.pack()
-        
-        if (b.get())==1:
-            Batbox=tk.Checkbutton(canvaspersonaje,text='Batman ',variable=b, onvalue=1, offvalue=0, 
-                        font=('Oswald ',12),bg= 'grey', fg='black',width=175,height=100,
-                        activeforeground='red', activebackground='black', image=batphoto, compound = 'right')
-            Batbox.pack()
-        if (w.get())==1:
-            Wobox=tk.Checkbutton(canvaspersonaje,text='Wonder Woman ',variable=w, onvalue=1, offvalue=0, 
+    canvasmenu=tk.Canvas(venjuego,bg='grey',width=300,height=300)
+    nombre=tk.Label(canvasmenu,text=('Super-'+(usuario.get())), font=('Papyrus',14), bg='grey')
+    sub_canvas_menu=tk.Canvas(venjuego,width=280,height=150,bg='grey')
+    sub_canvas_menu.place(x=10,y=400)
+    nombre.place(x=80,y=10)
+    puntostitulo=tk.Label(canvasmenu, text=('Puntaje:'),bg='grey')
+    sumapersonajes=(s.get())+(w.get())+(b.get())+(f.get()+(g.get())+(h.get())+(mm.get())+(ca.get())+(z.get())+(a.get())+(bg.get())+(m.get())+(nw.get())+
+                                                  (sg.get())+(aq.get()))
+    puntos=tk.Label(canvasmenu, text=(sumapersonajes),bg='grey')
+    puntostitulo.place(x=200,y=10)
+    puntos.place(x=200,y=30)
+    canvasmenu.place(x=0, y=310)
+    
+    canvasvillano=tk.Canvas(venjuego,bg='grey',width=350,height=400)
+    canvasvillano.place(x=1210)
+    def villanos():
+        if(s.get())==0:
+            probabilidades=[1,2,3,4]
+            random.choice(probabilidades)
+            if random.choice(probabilidades)==1:
+                Supbox=tk.Checkbutton(canvasvillano,text='Superman ',variable=s, onvalue=0, offvalue=1, 
+                        font=('Oswald ',12),bg= 'grey', fg='black',width=220,height=100, 
+                        activeforeground='red', activebackground='black', image=supphoto, compound = 'right',pady=50)
+                Supbox.pack()
+                
+        if(b.get())==0:
+            probabilidades=[1,2,3,4]
+            if random.choice(probabilidades)==1:
+                print ('1')
+                Batbox=tk.Checkbutton(canvasvillano,text='Batman ',variable=b, onvalue=1, offvalue=0, 
                         font=('Oswald ',12),bg= 'grey', fg='black',width=220,height=100,
-                        activeforeground='red', activebackground='black', image=wophoto, compound = 'right')
-            Wobox.pack()
+                        activeforeground='red', activebackground='black', image=batphoto, compound = 'right',pady=50)
+                Batbox.pack()
+
+        if (w.get())==0:
+            probabilidades=[1,2,3,4]
+            random.choice(probabilidades)
+            if random.choice(probabilidades)==1:
+                print ('2')
+                Wobox=tk.Checkbutton(canvasvillano,text='Wonder Woman ',variable=w, onvalue=1, offvalue=0, 
+                        font=('Oswald ',12),bg= 'grey', fg='black',width=220,height=100,
+                        activeforeground='red', activebackground='black', image=wophoto, compound = 'right',pady=50)
+                Wobox.pack()
+
+        if (f.get())==0:
+            probabilidades=[1,2,3,4]
+            random.choice(probabilidades)
+            if random.choice(probabilidades)==1:
+                print ('3')
+                Flashbox=tk.Checkbutton(canvasvillano,text='Flash ',variable=f, onvalue=1, offvalue=0, 
+                        font=('Oswald ',12),bg= 'grey', fg='black',width=220,height=100,
+                        activeforeground='red', activebackground='black', image=flashphoto, compound = 'right',pady=50)
+                Flashbox.pack()
+
+        if(g.get())==0:
+            probabilidades=[1,2,3,4]
+            if random.choice(probabilidades)==1:
+                print ('4')
+                Greenbox=tk.Checkbutton(canvasvillano,text='Green Lantern ',variable=g, onvalue=1, offvalue=0, 
+                        font=('Oswald ',12),bg= 'grey', fg='black',width=220,height=100,
+                        activeforeground='red', activebackground='black', image=greenphoto, compound = 'right',pady=50)
+                Greenbox.pack()
+
+        if (h.get())==0:
+            probabilidades=[1,2,3,4]
+            if random.choice(probabilidades)==1:
+                print ('5')
+                Hawkbox=tk.Checkbutton(canvasvillano,text='Hawkgirl ',variable=h, onvalue=1, offvalue=0, 
+                        font=('Oswald ',12),bg= 'grey', fg='black',width=220,height=100,
+                        activeforeground='red', activebackground='black', image=hawkphoto, compound = 'right',pady=50)
+                Hawkbox.pack()
+        if (mm.get())==0:
+            probabilidades=[1,2,3,4]
+            if random.choice(probabilidades)==1:
+                print ('6')
+                Martianbox=tk.Checkbutton(canvasvillano,text='Martian Manhunter ',variable=mm, onvalue=1, offvalue=0, 
+                        font=('Oswald ',12),bg= 'grey', fg='black',width=220,height=100,
+                        activeforeground='red', activebackground='black', image=martianphoto, compound = 'right',pady=50)
+                Martianbox.pack()
+
+        if (ca.get())==0:
+            probabilidades=[1,2,3,4] 
+            if random.choice(probabilidades)==1:
+                print ('7')
+                Canarybox=tk.Checkbutton(canvasvillano,text='Black Canary ',variable=ca, onvalue=1, offvalue=0, 
+                        font=('Oswald ',12),bg= 'grey', fg='black',width=220,height=100,
+                        activeforeground='red', activebackground='black', image=canaryphoto, compound = 'right',pady=50)
+                Canarybox.pack()
+        if (z.get())==0:
+            probabilidades=[1,2,3,4] 
+            if random.choice(probabilidades)==1:
+                print ('8')
+                Zatannabox=tk.Checkbutton(canvasvillano,text='Zatanna ',variable=z, onvalue=1, offvalue=0, 
+                        font=('Oswald ',12),bg= 'grey', fg='black',width=220,height=100,
+                        activeforeground='red', activebackground='black', image=zatannaphoto, compound = 'right',pady=50)
+                Zatannabox.pack()
+
+        if (a.get())==0:
+            probabilidades=[1,2,3,4] 
+            if random.choice(probabilidades)==1:
+                print (random.choice(probabilidades))
+                Arrowbox=tk.Checkbutton(canvasvillano,text='Green Arrow ',variable=a, onvalue=1, offvalue=0, 
+                        font=('Oswald ',12),bg= 'grey', fg='black',width=220,height=100,
+                        activeforeground='red', activebackground='black', image=arrowphoto, compound = 'right',pady=50)
+                Arrowbox.pack()
+            
+        if (bg.get())==0:
+            probabilidades=[1,2,3,4] 
+            if random.choice(probabilidades)==1:
+                print (random.choice(probabilidades))
+                Goldox=tk.Checkbutton(canvasvillano,text='Booster Gold ',variable=bg, onvalue=1, offvalue=0, 
+                        font=('Oswald ',12),bg= 'grey', fg='black',width=220,height=100,
+                        activeforeground='red', activebackground='black', image=goldphoto, compound = 'right',pady=50)
+                Goldbox.pack()
+        if (m.get())==0:
+            probabilidades=[1,2,3,4] 
+            if random.choice(probabilidades)==1:
+                print (random.choice(probabilidades))
+                Marvelbox=tk.Checkbutton(canvasvillano,text='Captain Marvel ',variable=m, onvalue=1, offvalue=0, 
+                        font=('Oswald ',12),bg= 'grey', fg='black',width=220,height=100,
+                        activeforeground='red', activebackground='black', image=marvelphoto, compound = 'right',pady=50)
+                Marvelbox.pack()
+        elif (m.get())==0:
+            probabilidades=[1,2,3,4] 
+            if random.choice(probabilidades)==1:
+                print (random.choice(probabilidades))
+                Nightbox=tk.Checkbutton(canvasvillano,text='Nightwing ',variable=nw, onvalue=1, offvalue=0, 
+                        font=('Oswald ',12),bg= 'grey', fg='black',width=220,height=100,
+                        activeforeground='red', activebackground='black', image=zatannaphoto, compound = 'right',pady=50)
+                Nightbox.pack()
+        if (sg.get())==0:
+            probabilidades=[1,2,3,4] 
+            if random.choice(probabilidades)==1:
+                print (random.choice(probabilidades))
+                Supgbox=tk.Checkbutton(canvasvillano,text='Supergirl',variable=sg, onvalue=1, offvalue=0, 
+                        font=('Oswald ',12),bg= 'grey', fg='black',width=220,height=100,
+                        activeforeground='red', activebackground='black', image=supphoto, compound = 'right',pady=50)
+                Supgbox.pack()
+
+        if (aq.get())==0:
+            probabilidades=[1,2,3,4] 
+            if random.choice(probabilidades)==1:
+                print (random.choice(probabilidades))
+                Aquabox=tk.Checkbutton(canvasvillano,text='Aquaman',variable=aq, onvalue=1, offvalue=0, 
+                        font=('Oswald ',12),bg= 'grey', fg='black',width=220,height=100,
+                        activeforeground='red', activebackground='black', image=aquaphoto, compound = 'right',pady=50)
+                Aquabox.pack()
+
+
+        
+            
+
+            
+        
+    def jugables():
+        ps=tk.IntVar()
+        def seleccionado():
+            if ps.get()==0:
+                print ('Superman')
+            elif ps.get()==1:
+                print ('Batman')
+            elif ps.get()==2:
+                print('Wonder Woman')
+            elif ps.get()==3:
+                print('Flash')
+            elif ps.get()==4:
+                print('Green Lantern')
+            elif ps.get()==5:
+                print('Hawkgril')
+            elif ps.get()==6:
+                print('Martian')
+            elif ps.get()==7:
+                print('Canary')
+            elif ps.get()==8:
+                print('Zatanna')
+            elif ps.get()==9:
+                print('Arrow')
+            elif ps.get()==10:
+                print('Booster')
+            elif ps.get()==11:
+                print('Marvel')
+            elif ps.get()==12:
+                print('Nightwing')
+            elif ps.get()==13:
+                print('Supergirl')
+            elif ps.get()==14:
+                print('Aquaman')
+            
+            
+        if (s.get())==1:
+            rb1 = tk.Radiobutton(sub_canvas_menu, text="Superman",image=supphoto, variable=ps, value=0,bg='grey',command=seleccionado)
+            rb1.pack(anchor='w')
+        
+
+            
+                    
+        if (b.get())==1:
+            rb2 = tk.Radiobutton(sub_canvas_menu, text="Batman", variable=ps, value=1, bg='grey',command=seleccionado)
+            rb2.pack(anchor='w')
+
+       
+
+            
+        if (w.get())==1:
+            rb1 = tk.Radiobutton(sub_canvas_menu, text="Wonder Woman", variable=ps, value=2,bg='grey',command=seleccionado)
+            rb1.pack(anchor='w')
+             
+        
+                
         if (f.get())==1:
-            Flashbox=tk.Checkbutton(canvaspersonaje,text='Flash ',variable=f, onvalue=1, offvalue=0, 
-                        font=('Oswald ',12),bg= 'grey', fg='black',width=175,height=100,
-                        activeforeground='red', activebackground='black', image=flashphoto, compound = 'right')
-            Flashbox.pack()
+            rb2 = tk.Radiobutton(sub_canvas_menu, text="Flash", variable=ps, value=3, bg='grey',command=seleccionado)
+            rb2.pack(anchor='w')
+             
+
+
+                
         if (g.get())==1:
-            Greenbox=tk.Checkbutton(canvaspersonaje,text='Green Lantern ',variable=g, onvalue=1, offvalue=0, 
-                        font=('Oswald ',12),bg= 'grey', fg='black',width=210,height=100,
-                        activeforeground='red', activebackground='black', image=greenphoto, compound = 'right')
-            Greenbox.pack()
+            rb2 = tk.Radiobutton(sub_canvas_menu, text="Green  Lantern", variable=ps, value=4, bg='grey',command=seleccionado)
+            rb2.pack(anchor='w')
+             
+        
+
         if (h.get())==1:
-            Hawkbox=tk.Checkbutton(canvaspersonaje,text='Hawkgirl ',variable=h, onvalue=1, offvalue=0, 
-                        font=('Oswald ',12),bg= 'grey', fg='black',width=175,height=100,
-                        activeforeground='red', activebackground='black', image=hawkphoto, compound = 'right')
-            Hawkbox.pack()
+            rb2 = tk.Radiobutton(sub_canvas_menu, text="Hawkgirl", variable=ps, value=5, bg='grey',command=seleccionado)
+            rb2.pack(anchor='w')
+             
+        
         if (mm.get())==1:
-            martiancarta=tk.Label(seleccion, text=('Martian Manhunter'),font= ('Arial',12),fg='black')
-            martiancarta.pack()
-            Martianbox=tk.Checkbutton(canvaspersonaje,text='Martian Manhunter ',variable=mm, onvalue=1, offvalue=0, 
-                        font=('Oswald ',12),bg= 'grey', fg='black',width=230,height=100,
-                        activeforeground='red', activebackground='black', image=martianphoto, compound = 'right')
-            Martianbox.pack()
+            rb2 = tk.Radiobutton(sub_canvas_menu, text="Martian Manhunter", variable=ps, value=6, bg='grey',command=seleccionado)
+            rb2.pack(anchor='w')
+             
+        
+ 
         if (ca.get())==1:
-            Canarybox=tk.Checkbutton(canvaspersonaje,text='Black Canary ',variable=ca, onvalue=1, offvalue=0, 
-                        font=('Oswald ',12),bg= 'grey', fg='black',width=205,height=100,
-                        activeforeground='red', activebackground='black', image=canaryphoto, compound = 'right')
-            Canarybox.pack()
+            rb2 = tk.Radiobutton(sub_canvas_menu, text="Black Canary", variable=ps, value=7, bg='grey',command=seleccionado)
+            rb2.pack(anchor='w')
+             
+        
+
         if (z.get())==1:
-            Zatannabox=tk.Checkbutton(canvaspersonaje,text='Zatanna ',variable=z, onvalue=1, offvalue=0, 
-                        font=('Oswald ',12),bg= 'grey', fg='black',width=175,height=100,
-                        activeforeground='red', activebackground='black', image=zatannaphoto, compound = 'right')
-            Zatannabox.pack()
+            rb2 = tk.Radiobutton(sub_canvas_menu, text="Zatanna", variable=ps, value=8, bg='grey',command=seleccionado)
+            rb2.pack(anchor='w')
+             
+        
+
         if (a.get())==1:
-            Arrowbox=tk.Checkbutton(canvaspersonaje,text='Green Arrow ',variable=a, onvalue=1, offvalue=0, 
-                        font=('Oswald ',12),bg= 'grey', fg='black',width=190,height=100,
-                        activeforeground='red', activebackground='black', image=arrowphoto, compound = 'right')
-            Arrowbox.pack()
+            rb2 = tk.Radiobutton(sub_canvas_menu, text="Green Arrow", variable=ps, value=9, bg='grey',command=seleccionado)
+            rb2.pack(anchor='w')
+             
+        
         if (bg.get())==1:
-            Goldbox=tk.Checkbutton(canvaspersonaje,text='Booster Gold ',variable=bg, onvalue=1, offvalue=0, 
-                        font=('Oswald ',12),bg= 'grey', fg='black',width=200,height=100,
-                        activeforeground='red', activebackground='black', image=goldphoto, compound = 'right')
-            Goldbox.pack()
+            rb2 = tk.Radiobutton(sub_canvas_menu, text="Booster Gold", variable=ps, value=10, bg='grey',command=seleccionado)
+            rb2.pack(anchor='w')
+             
+        
+
+            
         if (m.get())==1:
-            Marvelbox=tk.Checkbutton(canvaspersonaje,text='Captain Marvel ',variable=m, onvalue=1, offvalue=0, 
-                        font=('Oswald ',12),bg= 'grey', fg='black',width=210,height=100,
-                        activeforeground='red', activebackground='black', image=marvelphoto, compound = 'right')
-            Marvelbox.pack()
+            rb2 = tk.Radiobutton(sub_canvas_menu, text="Captain Marvel", variable=ps, value=11, bg='grey',command=seleccionado)
+            rb2.pack(anchor='w')
+        
             
         if (nw.get())==1:
-            Nightbox=tk.Checkbutton(canvaspersonaje,text='Nightwing ',variable=nw, onvalue=1, offvalue=0, 
-                        font=('Oswald ',12),bg= 'grey', fg='black',width=170,height=100,
-                        activeforeground='red', activebackground='black', image=nightphoto, compound = 'right')
-            Nightbox.pack()
+            rb2 = tk.Radiobutton(sub_canvas_menu, text="Captain Marvel", variable=ps, value=12, bg='grey',command=seleccionado)
+            rb2.pack(anchor='w')
+        
+            
+            
         if (sg.get())==1:
-            Supgbox=tk.Checkbutton(canvaspersonaje,text='Supergirl ',variable=sg, onvalue=1, offvalue=0, 
-                        font=('Oswald ',12),bg= 'grey', fg='black',width=175,height=100, 
-                        activeforeground='red', activebackground='black', image=supgphoto, compound = 'right')
-            Supgbox.pack()
+            rb2 = tk.Radiobutton(sub_canvas_menu, text="Supergirl", variable=ps, value=13, bg='grey',command=seleccionado)
+            rb2.pack(anchor='w')
+        
         if (aq.get())==1:
-            Aquabox=tk.Checkbutton(canvaspersonaje,text='Aquaman ',variable=aq, onvalue=1, offvalue=0, 
-                        font=('Oswald ',12),bg= 'grey', fg='black',width=175,height=100, 
-                        activeforeground='red', activebackground='black', image=aquaphoto, compound = 'right')
-            Aquabox.pack()
-    def villanos():
-        seleccion=tk.Label(venjuegos, text=('Personajes villanos'))
-        seleccion.pack()
+            rb2 = tk.Radiobutton(sub_canvas_menu, text="Aquaman", variable=ps, value=14, bg='grey',command=seleccionado)
+            rb2.pack(anchor='w')
+        
     
 
-    canvasmapa=tk.Canvas(venjuego,bg='grey',width=300,height=300)
-    mapatitulo=tk.Label(canvasmapa, text=('Mapa'),font=('Papyrus',12),bg='grey')
+    canvasmapa=tk.Canvas(venjuego,bg='black',width=300,height=300)
+    canvasmapa_grande=tk.Canvas(venjuego, bg='white', width=700, height=600)
+    mapatitulo=tk.Label(canvasmapa, text=('Mapa'),font=('Papyrus',12),bg='black', fg='white')
     mapatitulo.place(x=120,y=10)
 
     def volver():
@@ -113,9 +299,16 @@ def principalis():
         fonduno=ImageTk.PhotoImage(fonduno_resize)
         canvasmapa.create_image(80,50,image=fonduno,anchor=tk.NW)
         canvasmapa.image=fonduno
+        
+        fonduno_copy_original=Image.open('fondo_copy.png')
+        fonduno_copy__resize=fonduno_copy_original.resize((700,600))
+        fonduno_copy_=ImageTk.PhotoImage(fonduno_copy__resize)
+        canvasmapa_grande.create_image(0,0,image=fonduno_copy_,anchor=tk.NW)
+        canvasmapa_grande.image=fonduno_copy_
+
 
     def siguiente_4():
-        texto_ubicacion_uno=tk.Label(venjuego,text=('Atalaya                                       '),bg='grey',font=('Papyrus',12), compound='bottom')
+        texto_ubicacion_uno=tk.Label(venjuego,text=('Atalaya                                      '),bg='black',fg='white',font=('Papyrus',12), compound='bottom')
         texto_ubicacion_uno.place(x=100,y=200)
         boton_mapa_4=tk.Button(canvasmapa, text='Siguiente',command=volver)
         boton_mapa_4.place(x=115,y=230)
@@ -124,8 +317,15 @@ def principalis():
         fonata=ImageTk.PhotoImage(fonata_resize)
         canvasmapa.create_image(80,50,image=fonata,anchor=tk.NW)
         canvasmapa.image=fonata
+
+        fonata_copy_original=Image.open('fonata_copy.png')
+        fonata_copy__resize=fonata_copy_original.resize((700,600))
+        fonata_copy_=ImageTk.PhotoImage(fonata_copy__resize)
+        canvasmapa_grande.create_image(0,0,image=fonata_copy_,anchor=tk.NW)
+        canvasmapa_grande.image=fonata_copy_
+        
     def siguiente_3():
-        texto_ubicacion_uno=tk.Label(venjuego,text=('Sala de Entrenamiento'),bg='grey',font=('Papyrus',12), compound='bottom')
+        texto_ubicacion_uno=tk.Label(venjuego,text=('Sala de Entrenamiento'),bg='black',fg='white',font=('Papyrus',12), compound='bottom')
         texto_ubicacion_uno.place(x=100,y=200)
         boton_mapa_4=tk.Button(canvasmapa, text='Siguiente',command=siguiente_4)
         boton_mapa_4.place(x=115,y=230)
@@ -135,8 +335,14 @@ def principalis():
         canvasmapa.create_image(80,50,image=fondos,anchor=tk.NW)
         canvasmapa.image=fondos
 
+        fondos_copy_original=Image.open('fondos_copy.png')
+        fondos_copy__resize=fondos_copy_original.resize((700,600))
+        fondos_copy_=ImageTk.PhotoImage(fondos_copy__resize)
+        canvasmapa_grande.create_image(0,0,image=fondos_copy_,anchor=tk.NW)
+        canvasmapa_grande.image=fondos_copy_
+
     def siguiente_2():
-        texto_ubicacion_uno=tk.Label(venjuego,text=('Sala de Reuniones'),bg='grey',font=('Papyrus',12), compound='bottom')
+        texto_ubicacion_uno=tk.Label(venjuego,text=('Sala de Reuniones'),bg='black',fg='white',font=('Papyrus',12), compound='bottom')
         texto_ubicacion_uno.place(x=100,y=200)
         boton_mapa_3=tk.Button(canvasmapa, text='Siguiente',command=siguiente_3)
         boton_mapa_3.place(x=115,y=230)
@@ -145,9 +351,16 @@ def principalis():
         fontres=ImageTk.PhotoImage(fontres_resize)
         canvasmapa.create_image(80,50,image=fontres,anchor=tk.NW)
         canvasmapa.image=fontres
+
+        fontres_copy_original=Image.open('fontres_copy.png')
+        fontres_copy__resize=fontres_copy_original.resize((700,600))
+        fontres_copy_=ImageTk.PhotoImage(fontres_copy__resize)
+        canvasmapa_grande.create_image(0,0,image=fontres_copy_,anchor=tk.NW)
+        canvasmapa_grande.image=fontres_copy_
+
         
     def siguiente_1():
-        texto_ubicacion_uno=tk.Label(venjuego,text=('Salón de la Justicia'),bg='grey',font=('Papyrus',12), compound='bottom')
+        texto_ubicacion_uno=tk.Label(venjuego,text=('Salón de la Justicia'),bg='black',fg='white',font=('Papyrus',12), compound='bottom')
         texto_ubicacion_uno.place(x=100,y=200)
         boton_mapa_2=tk.Button(canvasmapa, text='Siguiente',command=siguiente_2)
         boton_mapa_2.place(x=115,y=230)
@@ -157,22 +370,33 @@ def principalis():
         canvasmapa.create_image(80,50,image=foncu,anchor=tk.NW)
         canvasmapa.image=foncu
 
+        foncu_copy_original=Image.open('foncu_copy.png')
+        foncu_copy__resize=foncu_copy_original.resize((700,600))
+        foncu_copy_=ImageTk.PhotoImage(foncu_copy__resize)
+        canvasmapa_grande.create_image(0,0,image=foncu_copy_,anchor=tk.NW)
+        canvasmapa_grande.image=foncu_copy_
+
         
     boton_mapa=tk.Button(canvasmapa, text='Siguiente',command=siguiente_1)
     boton_mapa.place(x=115,y=230)
-    texto_ubicacion_uno=tk.Label(venjuego,text=('Patio Principal'),bg='grey',font=('Papyrus',12), compound='bottom')
+    texto_ubicacion_uno=tk.Label(venjuego,text=('Patio Principal'),bg='black',fg='white',font=('Papyrus',12), compound='bottom')
     texto_ubicacion_uno.place(x=100,y=200)
     canvasmapa.place(x=0,y=0)
+    canvasmapa_grande.place(x=400)
     fonduno_original=Image.open('fondo.png')
     fonduno_resize=fonduno_original.resize((130,130))
     fonduno=ImageTk.PhotoImage(fonduno_resize)
     canvasmapa.create_image(80,50,image=fonduno,anchor=tk.NW)
     canvasmapa.image=fonduno
 
+    fonduno_copy_original=Image.open('fondo_copy.png')
+    fonduno_copy__resize=fonduno_copy_original.resize((700,600))
+    fonduno_copy_=ImageTk.PhotoImage(fonduno_copy__resize)
+    canvasmapa_grande.create_image(0,0,image=fonduno_copy_,anchor=tk.NW)
+    canvasmapa_grande.image=fonduno_copy_
+
     
-    canvasmenu=tk.Canvas(venjuego,bg='grey',width=300,height=300)
-    nombre=tk.Label(canvasmenu,text=('Super-'+(usuario.get())), font=('Papyrus',14), bg='grey')
-    nombre.place(x=80,y=10)
+    
 
     
         
@@ -194,13 +418,10 @@ def principalis():
         uno=ImageTk.PhotoImage(avataruno)
         canvasmenu.create_image(10,10,image=uno,anchor=tk.NW)
         canvasmenu.image=uno
-    canvasmenu.place(x=0, y=310)
-       
-   
-    info=tk.Label(venjuego,text=('Juego'), font= ('Arial',12))
-    info.pack()
-    return jugables()
-    return villanos()
+        
+    
+    villanos()  
+    jugables()
         
     venjuego.mainloop()
 #--------------------------------------------------------------------------------
@@ -425,7 +646,7 @@ def paginabatalla():
             window.withdraw()
             principalis()
         else:
-            recordatorio=tk.Label(window,text=('DEBE ESCRIBIR SU NOMBRE, NOBLE JUGADOR'), font=('Papyrus',12,'bold'), bg='Black', fg='white')
+            recordatorio=tk.Label(window,text=('DEBE ESCRIBIR SU NOMBRE'), font=('Papyrus',12,'bold'), fg='black')
             recordatorio.place(x=10,y=250)
             
         

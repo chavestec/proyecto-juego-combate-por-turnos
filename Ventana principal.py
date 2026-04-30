@@ -21,147 +21,181 @@ def principalis():
     puntos.place(x=200,y=30)
     canvasmenu.place(x=0, y=310)
     
-    canvasvillano=tk.Canvas(venjuego,bg='grey',width=350,height=400)
-    canvasvillano.place(x=1210)
-    def villanos():
-        if(s.get())==0:
-            probabilidades=[1,2,3,4]
-            random.choice(probabilidades)
-            if random.choice(probabilidades)==1:
-                Supbox=tk.Checkbutton(canvasvillano,text='Superman ',variable=s, onvalue=0, offvalue=1, 
-                        font=('Oswald ',12),bg= 'grey', fg='black',width=220,height=100, 
-                        activeforeground='red', activebackground='black', image=supphoto, compound = 'right',pady=50)
-                Supbox.pack()
-                
-        if(b.get())==0:
-            probabilidades=[1,2,3,4]
-            if random.choice(probabilidades)==1:
-                print ('1')
-                Batbox=tk.Checkbutton(canvasvillano,text='Batman ',variable=b, onvalue=1, offvalue=0, 
+    
+    
+    canvasvillano_1=tk.Canvas(venjuego,bg='grey',width=250,height=300)
+    canvasvillano_1.place(x=1210,y=0)
+    canvasvillano_2=tk.Canvas(venjuego,bg='grey',width=250,height=300)
+    canvasvillano_2.place(x=1210,y=200)
+    canvasvillano_3=tk.Canvas(venjuego,bg='grey',width=250,height=300)
+    canvasvillano_3.place(x=1210,y=400)
+    
+
+    def supvillano():
+            Supbox=tk.Checkbutton(canvasvillano_1,text='Superman ',variable=s, onvalue=0, offvalue=1, 
+                    font=('Oswald ',12),bg= 'grey', fg='black',width=220,height=100, 
+                    activeforeground='red', activebackground='black', image=supphoto, compound = 'right',pady=50)
+            Supbox.place(x=0,y=0)
+            Supbox.lift()
+
+    def batvillano():
+            Batbox=tk.Checkbutton(canvasvillano_2,text='Batman ',variable=b, onvalue=1, offvalue=0, 
                         font=('Oswald ',12),bg= 'grey', fg='black',width=220,height=100,
                         activeforeground='red', activebackground='black', image=batphoto, compound = 'right',pady=50)
-                Batbox.pack()
-
-        if (w.get())==0:
-            probabilidades=[1,2,3,4]
-            random.choice(probabilidades)
-            if random.choice(probabilidades)==1:
-                print ('2')
-                Wobox=tk.Checkbutton(canvasvillano,text='Wonder Woman ',variable=w, onvalue=1, offvalue=0, 
+            Batbox.place(x=0,y=0)
+            Batbox.lift()
+ 
+    def wondervillano():    
+            Wobox=tk.Checkbutton(canvasvillano_3,text='Wonder Woman ',variable=w, onvalue=1, offvalue=0, 
                         font=('Oswald ',12),bg= 'grey', fg='black',width=220,height=100,
                         activeforeground='red', activebackground='black', image=wophoto, compound = 'right',pady=50)
-                Wobox.pack()
-
-        if (f.get())==0:
-            probabilidades=[1,2,3,4]
-            random.choice(probabilidades)
-            if random.choice(probabilidades)==1:
-                print ('3')
-                Flashbox=tk.Checkbutton(canvasvillano,text='Flash ',variable=f, onvalue=1, offvalue=0, 
+            Wobox.place(x=0,y=0)
+            Wobox.lift()
+    def flashvillano():
+             
+            Flashbox=tk.Checkbutton(canvasvillano_1,text='Flash ',variable=f, onvalue=1, offvalue=0, 
                         font=('Oswald ',12),bg= 'grey', fg='black',width=220,height=100,
                         activeforeground='red', activebackground='black', image=flashphoto, compound = 'right',pady=50)
-                Flashbox.pack()
-
-        if(g.get())==0:
-            probabilidades=[1,2,3,4]
-            if random.choice(probabilidades)==1:
-                print ('4')
-                Greenbox=tk.Checkbutton(canvasvillano,text='Green Lantern ',variable=g, onvalue=1, offvalue=0, 
+            Flashbox.place(x=0,y=0)
+            Flashbox.lift()
+    def greenvillano():
+            Greenbox=tk.Checkbutton(canvasvillano_2,text='Green Lantern ',variable=g, onvalue=1, offvalue=0, 
                         font=('Oswald ',12),bg= 'grey', fg='black',width=220,height=100,
                         activeforeground='red', activebackground='black', image=greenphoto, compound = 'right',pady=50)
-                Greenbox.pack()
-
-        if (h.get())==0:
-            probabilidades=[1,2,3,4]
-            if random.choice(probabilidades)==1:
-                print ('5')
-                Hawkbox=tk.Checkbutton(canvasvillano,text='Hawkgirl ',variable=h, onvalue=1, offvalue=0, 
+            Greenbox.place(x=0,y=0)
+            Greenbox.lift()
+    def hawkvillano():
+             
+            Hawkbox=tk.Checkbutton(canvasvillano_3,text='Hawkgirl ',variable=h, onvalue=1, offvalue=0, 
                         font=('Oswald ',12),bg= 'grey', fg='black',width=220,height=100,
                         activeforeground='red', activebackground='black', image=hawkphoto, compound = 'right',pady=50)
-                Hawkbox.pack()
-        if (mm.get())==0:
-            probabilidades=[1,2,3,4]
-            if random.choice(probabilidades)==1:
-                print ('6')
-                Martianbox=tk.Checkbutton(canvasvillano,text='Martian Manhunter ',variable=mm, onvalue=1, offvalue=0, 
+            Hawkbox.place(x=0,y=0)
+            Hawkbox.lift()
+    def martianvillano():
+             
+            Martianbox=tk.Checkbutton(canvasvillano_1,text='Martian Manhunter ',variable=mm, onvalue=1, offvalue=0, 
                         font=('Oswald ',12),bg= 'grey', fg='black',width=220,height=100,
                         activeforeground='red', activebackground='black', image=martianphoto, compound = 'right',pady=50)
-                Martianbox.pack()
-
-        if (ca.get())==0:
-            probabilidades=[1,2,3,4] 
-            if random.choice(probabilidades)==1:
-                print ('7')
-                Canarybox=tk.Checkbutton(canvasvillano,text='Black Canary ',variable=ca, onvalue=1, offvalue=0, 
+            Martianbox.place(x=0,y=0)
+            Martianbox.lift()
+    def canaryvillano():
+             
+            Canarybox=tk.Checkbutton(canvasvillano_2,text='Black Canary ',variable=ca, onvalue=1, offvalue=0, 
                         font=('Oswald ',12),bg= 'grey', fg='black',width=220,height=100,
                         activeforeground='red', activebackground='black', image=canaryphoto, compound = 'right',pady=50)
-                Canarybox.pack()
-        if (z.get())==0:
-            probabilidades=[1,2,3,4] 
-            if random.choice(probabilidades)==1:
-                print ('8')
-                Zatannabox=tk.Checkbutton(canvasvillano,text='Zatanna ',variable=z, onvalue=1, offvalue=0, 
+            Canarybox.place(x=0,y=0)
+            Canarybox.lift()
+    def zatannavillano():
+             
+            Zatannabox=tk.Checkbutton(canvasvillano_3,text='Zatanna ',variable=z, onvalue=1, offvalue=0, 
                         font=('Oswald ',12),bg= 'grey', fg='black',width=220,height=100,
                         activeforeground='red', activebackground='black', image=zatannaphoto, compound = 'right',pady=50)
-                Zatannabox.pack()
-
-        if (a.get())==0:
-            probabilidades=[1,2,3,4] 
-            if random.choice(probabilidades)==1:
-                print (random.choice(probabilidades))
-                Arrowbox=tk.Checkbutton(canvasvillano,text='Green Arrow ',variable=a, onvalue=1, offvalue=0, 
+            Zatannabox.place(x=0,y=0)
+            Zatannabox.lift()
+    def arrowvillano():
+             
+            Arrowbox=tk.Checkbutton(canvasvillano_1,text='Green Arrow ',variable=a, onvalue=1, offvalue=0, 
                         font=('Oswald ',12),bg= 'grey', fg='black',width=220,height=100,
                         activeforeground='red', activebackground='black', image=arrowphoto, compound = 'right',pady=50)
-                Arrowbox.pack()
-            
-        if (bg.get())==0:
-            probabilidades=[1,2,3,4] 
-            if random.choice(probabilidades)==1:
-                print (random.choice(probabilidades))
-                Goldox=tk.Checkbutton(canvasvillano,text='Booster Gold ',variable=bg, onvalue=1, offvalue=0, 
+            Arrowbox.place(x=0,y=0)
+            Arrowbox.lift()
+    def goldvillano():
+             
+            Goldox=tk.Checkbutton(canvasvillano_2,text='Booster Gold ',variable=bg, onvalue=1, offvalue=0, 
                         font=('Oswald ',12),bg= 'grey', fg='black',width=220,height=100,
                         activeforeground='red', activebackground='black', image=goldphoto, compound = 'right',pady=50)
-                Goldbox.pack()
-        if (m.get())==0:
-            probabilidades=[1,2,3,4] 
-            if random.choice(probabilidades)==1:
-                print (random.choice(probabilidades))
-                Marvelbox=tk.Checkbutton(canvasvillano,text='Captain Marvel ',variable=m, onvalue=1, offvalue=0, 
+            Goldbox.place(x=0,y=0)
+            Goldbox.lift()
+    def marvelvillano():
+             
+            Marvelbox=tk.Checkbutton(canvasvillano_3,text='Captain Marvel ',variable=m, onvalue=1, offvalue=0, 
                         font=('Oswald ',12),bg= 'grey', fg='black',width=220,height=100,
                         activeforeground='red', activebackground='black', image=marvelphoto, compound = 'right',pady=50)
-                Marvelbox.pack()
-        elif (m.get())==0:
-            probabilidades=[1,2,3,4] 
-            if random.choice(probabilidades)==1:
-                print (random.choice(probabilidades))
-                Nightbox=tk.Checkbutton(canvasvillano,text='Nightwing ',variable=nw, onvalue=1, offvalue=0, 
+            Marvelbox.place(x=0,y=0)
+            Marvelbox.lift()
+    def nightvillano():
+             
+            Nightbox=tk.Checkbutton(canvasvillano_1,text='Nightwing ',variable=nw, onvalue=1, offvalue=0, 
                         font=('Oswald ',12),bg= 'grey', fg='black',width=220,height=100,
-                        activeforeground='red', activebackground='black', image=zatannaphoto, compound = 'right',pady=50)
-                Nightbox.pack()
-        if (sg.get())==0:
-            probabilidades=[1,2,3,4] 
-            if random.choice(probabilidades)==1:
-                print (random.choice(probabilidades))
-                Supgbox=tk.Checkbutton(canvasvillano,text='Supergirl',variable=sg, onvalue=1, offvalue=0, 
+                        activeforeground='red', activebackground='black', image=nightphoto, compound = 'right',pady=50)
+            Nightbox.place(x=0,y=0)
+            Nightbox.lift()
+    def supgvillano():
+             
+            Supgbox=tk.Checkbutton(canvasvillano_2,text='Supergirl',variable=sg, onvalue=1, offvalue=0, 
                         font=('Oswald ',12),bg= 'grey', fg='black',width=220,height=100,
-                        activeforeground='red', activebackground='black', image=supphoto, compound = 'right',pady=50)
-                Supgbox.pack()
+                        activeforeground='red', activebackground='black', image=supgphoto, compound = 'right',pady=50)
+            Supgbox.place(x=0,y=0)
+            Supgbox.lift()
 
-        if (aq.get())==0:
-            probabilidades=[1,2,3,4] 
-            if random.choice(probabilidades)==1:
-                print (random.choice(probabilidades))
-                Aquabox=tk.Checkbutton(canvasvillano,text='Aquaman',variable=aq, onvalue=1, offvalue=0, 
+    def aquavillano():
+             
+            Aquabox=tk.Checkbutton(canvasvillano_3,text='Aquaman',variable=aq, onvalue=1, offvalue=0, 
                         font=('Oswald ',12),bg= 'grey', fg='black',width=220,height=100,
                         activeforeground='red', activebackground='black', image=aquaphoto, compound = 'right',pady=50)
-                Aquabox.pack()
-
+            Aquabox.place(x=0,y=0)    
+            Aquabox.lift()
+            
+    posiblesvillanos_1=[]
+    posiblesvillanos_2=[]
+    posiblesvillanos_3=[]
 
         
-            
-
-            
         
+    if(s.get())==0:
+            posiblesvillanos_1.append(supvillano)
+            
+    if(b.get())==0:
+             posiblesvillanos_2.append(batvillano)
+            
+    if (w.get())==0:
+            posiblesvillanos_3.append(wondervillano)    
+                
+    if (f.get())==0:
+            posiblesvillanos_1.append(flashvillano)
+            
+    if(g.get())==0:
+            posiblesvillanos_2.append(greenvillano)
+
+    if (h.get())==0:
+            posiblesvillanos_3.append(hawkvillano)
+
+    if (mm.get())==0:
+            posiblesvillanos_1.append(martianvillano)
+
+    if (ca.get())==0:
+            posiblesvillanos_2.append(canaryvillano)
+
+    if (z.get())==0:
+            posiblesvillanos_3.append(zatannavillano)
+
+    if (a.get())==0:
+            posiblesvillanos_1.append(arrowvillano)
+
+    if (bg.get())==0:
+            posiblesvillanos_2.append(goldvillano)
+
+    if (m.get())==0:
+            posiblesvillanos_3.append(marvelvillano)
+
+    if (nw.get())==0:
+            posiblesvillanos_1.append(nightvillano)
+
+    if (sg.get())==0:
+            posiblesvillanos_2.append(supgvillano)
+
+    if (aq.get())==0:
+            posiblesvillanos_3.append(aquavillano)
+
+    villanouno =random.choice(posiblesvillanos_1)
+    villanouno()
+
+    villanodos =random.choice(posiblesvillanos_2)
+    villanodos()
+
+    villanotres =random.choice(posiblesvillanos_3)
+    villanotres()
+                
     def jugables():
         ps=tk.IntVar()
         def seleccionado():
@@ -199,37 +233,28 @@ def principalis():
             
         if (s.get())==1:
             rb1 = tk.Radiobutton(sub_canvas_menu, text="Superman",image=supphoto, variable=ps, value=0,bg='grey',command=seleccionado)
-            rb1.pack(anchor='w')
-        
-
-            
+            rb1.pack(anchor='w')            
                     
         if (b.get())==1:
             rb2 = tk.Radiobutton(sub_canvas_menu, text="Batman", variable=ps, value=1, bg='grey',command=seleccionado)
             rb2.pack(anchor='w')
 
-       
-
-            
+    
         if (w.get())==1:
             rb1 = tk.Radiobutton(sub_canvas_menu, text="Wonder Woman", variable=ps, value=2,bg='grey',command=seleccionado)
             rb1.pack(anchor='w')
              
-        
-                
+    
         if (f.get())==1:
             rb2 = tk.Radiobutton(sub_canvas_menu, text="Flash", variable=ps, value=3, bg='grey',command=seleccionado)
             rb2.pack(anchor='w')
              
-
-
-                
+    
         if (g.get())==1:
             rb2 = tk.Radiobutton(sub_canvas_menu, text="Green  Lantern", variable=ps, value=4, bg='grey',command=seleccionado)
             rb2.pack(anchor='w')
-             
-        
 
+             
         if (h.get())==1:
             rb2 = tk.Radiobutton(sub_canvas_menu, text="Hawkgirl", variable=ps, value=5, bg='grey',command=seleccionado)
             rb2.pack(anchor='w')
@@ -240,18 +265,15 @@ def principalis():
             rb2.pack(anchor='w')
              
         
- 
         if (ca.get())==1:
             rb2 = tk.Radiobutton(sub_canvas_menu, text="Black Canary", variable=ps, value=7, bg='grey',command=seleccionado)
             rb2.pack(anchor='w')
              
-        
 
         if (z.get())==1:
             rb2 = tk.Radiobutton(sub_canvas_menu, text="Zatanna", variable=ps, value=8, bg='grey',command=seleccionado)
             rb2.pack(anchor='w')
              
-        
 
         if (a.get())==1:
             rb2 = tk.Radiobutton(sub_canvas_menu, text="Green Arrow", variable=ps, value=9, bg='grey',command=seleccionado)
@@ -262,8 +284,6 @@ def principalis():
             rb2 = tk.Radiobutton(sub_canvas_menu, text="Booster Gold", variable=ps, value=10, bg='grey',command=seleccionado)
             rb2.pack(anchor='w')
              
-        
-
             
         if (m.get())==1:
             rb2 = tk.Radiobutton(sub_canvas_menu, text="Captain Marvel", variable=ps, value=11, bg='grey',command=seleccionado)
@@ -292,6 +312,9 @@ def principalis():
     mapatitulo.place(x=120,y=10)
 
     def volver():
+        canvasvillano_1.delete('all')
+        canvasvillano_2.delete('all')
+        canvasvillano_3.delete('all')
         boton_mapa.lift()
         texto_ubicacion_uno.lift()
         fonduno_original=Image.open('fondo.png')
@@ -305,9 +328,19 @@ def principalis():
         fonduno_copy_=ImageTk.PhotoImage(fonduno_copy__resize)
         canvasmapa_grande.create_image(0,0,image=fonduno_copy_,anchor=tk.NW)
         canvasmapa_grande.image=fonduno_copy_
+        
+        villanouno =random.choice(posiblesvillanos_1)
+        villanouno()
 
+        villanodos =random.choice(posiblesvillanos_2)
+        villanodos()  
 
+        villanotres =random.choice(posiblesvillanos_3)
+        villanotres()
     def siguiente_4():
+        canvasvillano_1.delete('all')
+        canvasvillano_2.delete('all')
+        canvasvillano_3.delete('all')
         texto_ubicacion_uno=tk.Label(venjuego,text=('Atalaya                                      '),bg='black',fg='white',font=('Papyrus',12), compound='bottom')
         texto_ubicacion_uno.place(x=100,y=200)
         boton_mapa_4=tk.Button(canvasmapa, text='Siguiente',command=volver)
@@ -323,8 +356,19 @@ def principalis():
         fonata_copy_=ImageTk.PhotoImage(fonata_copy__resize)
         canvasmapa_grande.create_image(0,0,image=fonata_copy_,anchor=tk.NW)
         canvasmapa_grande.image=fonata_copy_
-        
+
+        villanouno =random.choice(posiblesvillanos_1)
+        villanouno()
+
+        villanodos =random.choice(posiblesvillanos_2)
+        villanodos()  
+
+        villanotres =random.choice(posiblesvillanos_3)
+        villanotres()
     def siguiente_3():
+        canvasvillano_1.delete('all')
+        canvasvillano_2.delete('all')
+        canvasvillano_3.delete('all')
         texto_ubicacion_uno=tk.Label(venjuego,text=('Sala de Entrenamiento'),bg='black',fg='white',font=('Papyrus',12), compound='bottom')
         texto_ubicacion_uno.place(x=100,y=200)
         boton_mapa_4=tk.Button(canvasmapa, text='Siguiente',command=siguiente_4)
@@ -340,8 +384,19 @@ def principalis():
         fondos_copy_=ImageTk.PhotoImage(fondos_copy__resize)
         canvasmapa_grande.create_image(0,0,image=fondos_copy_,anchor=tk.NW)
         canvasmapa_grande.image=fondos_copy_
+        
+        villanouno =random.choice(posiblesvillanos_1)
+        villanouno()
 
+        villanodos =random.choice(posiblesvillanos_2)
+        villanodos()  
+
+        villanotres =random.choice(posiblesvillanos_3)
+        villanotres()
     def siguiente_2():
+        canvasvillano_1.delete('all')
+        canvasvillano_2.delete('all')
+        canvasvillano_3.delete('all')
         texto_ubicacion_uno=tk.Label(venjuego,text=('Sala de Reuniones'),bg='black',fg='white',font=('Papyrus',12), compound='bottom')
         texto_ubicacion_uno.place(x=100,y=200)
         boton_mapa_3=tk.Button(canvasmapa, text='Siguiente',command=siguiente_3)
@@ -358,8 +413,18 @@ def principalis():
         canvasmapa_grande.create_image(0,0,image=fontres_copy_,anchor=tk.NW)
         canvasmapa_grande.image=fontres_copy_
 
-        
+        villanouno =random.choice(posiblesvillanos_1)
+        villanouno()
+
+        villanodos =random.choice(posiblesvillanos_2)
+        villanodos()  
+
+        villanotres =random.choice(posiblesvillanos_3)
+        villanotres()
     def siguiente_1():
+        canvasvillano_1.delete('all')
+        canvasvillano_2.delete('all')
+        canvasvillano_3.delete('all')
         texto_ubicacion_uno=tk.Label(venjuego,text=('Salón de la Justicia'),bg='black',fg='white',font=('Papyrus',12), compound='bottom')
         texto_ubicacion_uno.place(x=100,y=200)
         boton_mapa_2=tk.Button(canvasmapa, text='Siguiente',command=siguiente_2)
@@ -375,7 +440,14 @@ def principalis():
         foncu_copy_=ImageTk.PhotoImage(foncu_copy__resize)
         canvasmapa_grande.create_image(0,0,image=foncu_copy_,anchor=tk.NW)
         canvasmapa_grande.image=foncu_copy_
+        villanouno =random.choice(posiblesvillanos_1)
+        villanouno()
 
+        villanodos =random.choice(posiblesvillanos_2)
+        villanodos()  
+
+        villanotres =random.choice(posiblesvillanos_3)
+        villanotres()
         
     boton_mapa=tk.Button(canvasmapa, text='Siguiente',command=siguiente_1)
     boton_mapa.place(x=115,y=230)
@@ -420,7 +492,7 @@ def principalis():
         canvasmenu.image=uno
         
     
-    villanos()  
+  
     jugables()
         
     venjuego.mainloop()

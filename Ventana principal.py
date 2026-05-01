@@ -1,5 +1,6 @@
 import funcionabout
 import random
+import time
 import tkinter as tk
 from PIL import Image, ImageTk
 #----------------VentanaBatallas-------------------------------------------------------------------------------------------------------------------------
@@ -23,116 +24,121 @@ def principalis():
     
     
     
-    canvasvillano_1=tk.Canvas(venjuego,bg='grey',width=250,height=300)
+    canvasvillano_1=tk.Canvas(venjuego,bg='grey',width=250,height=200)
     canvasvillano_1.place(x=1210,y=0)
-    canvasvillano_2=tk.Canvas(venjuego,bg='grey',width=250,height=300)
-    canvasvillano_2.place(x=1210,y=200)
-    canvasvillano_3=tk.Canvas(venjuego,bg='grey',width=250,height=300)
-    canvasvillano_3.place(x=1210,y=400)
-    
+    canvasvillano_2=tk.Canvas(venjuego,bg='grey',width=250,height=200)
+    canvasvillano_2.place(x=1210,y=150)
+    canvasvillano_3=tk.Canvas(venjuego,bg='grey',width=250,height=200)
+    canvasvillano_3.place(x=1210,y=300)
+
+    vil=tk.IntVar()
+    def villanos():
+       
+        
+            if vil.get()==0:
+                print ('Superman')
+            elif vil.get()==1:
+                print ('Batman')
+            elif vil.get()==2:
+                print('Wonder Woman')
+            elif vil.get()==3:
+                print('Flash')
+            elif vil.get()==4:
+                print('Green Lantern')
+            elif vil.get()==5:
+                print('Hawkgril')
+            elif vil.get()==6:
+                print('Martian')
+            elif vil.get()==7:
+                print('Canary')
+            elif vil.get()==8:
+                print('Zatanna')
+            elif vil.get()==9:
+                print('Arrow')
+            elif vil.get()==10:
+                print('Booster')
+            elif vil.get()==11:
+                print('Marvel')
+            elif vil.get()==12:
+                print('Nightwing')
+            elif vil.get()==13:
+                print('Supergirl')
+            elif vil.get()==14:
+                print('Aquaman')
 
     def supvillano():
-            Supbox=tk.Checkbutton(canvasvillano_1,text='Superman ',variable=s, onvalue=0, offvalue=1, 
-                    font=('Oswald ',12),bg= 'grey', fg='black',width=220,height=100, 
-                    activeforeground='red', activebackground='black', image=supphoto, compound = 'right',pady=50)
+            Supbox=tk.Radiobutton(canvasvillano_1, text="Superman",image=supphoto, variable=vil, value=0,bg='grey',command=villanos)
+            
             Supbox.place(x=0,y=0)
             Supbox.lift()
 
     def batvillano():
-            Batbox=tk.Checkbutton(canvasvillano_2,text='Batman ',variable=b, onvalue=1, offvalue=0, 
-                        font=('Oswald ',12),bg= 'grey', fg='black',width=220,height=100,
-                        activeforeground='red', activebackground='black', image=batphoto, compound = 'right',pady=50)
+            Batbox=tk.Radiobutton(canvasvillano_2, text="Wonder Woman", variable=vil, value=2,bg='grey',command=villanos)
             Batbox.place(x=0,y=0)
             Batbox.lift()
  
     def wondervillano():    
-            Wobox=tk.Checkbutton(canvasvillano_3,text='Wonder Woman ',variable=w, onvalue=1, offvalue=0, 
-                        font=('Oswald ',12),bg= 'grey', fg='black',width=220,height=100,
-                        activeforeground='red', activebackground='black', image=wophoto, compound = 'right',pady=50)
+            Wobox=tk.Radiobutton(canvasvillano_3, text="Wonder Woman", variable=vil, value=2,bg='grey',command=villanos)
             Wobox.place(x=0,y=0)
             Wobox.lift()
     def flashvillano():
              
-            Flashbox=tk.Checkbutton(canvasvillano_1,text='Flash ',variable=f, onvalue=1, offvalue=0, 
-                        font=('Oswald ',12),bg= 'grey', fg='black',width=220,height=100,
-                        activeforeground='red', activebackground='black', image=flashphoto, compound = 'right',pady=50)
+            Flashbox=tk.Radiobutton(canvasvillano_1, text="Flash", variable=vil, value=3, bg='grey',command=villanos)
             Flashbox.place(x=0,y=0)
             Flashbox.lift()
     def greenvillano():
-            Greenbox=tk.Checkbutton(canvasvillano_2,text='Green Lantern ',variable=g, onvalue=1, offvalue=0, 
-                        font=('Oswald ',12),bg= 'grey', fg='black',width=220,height=100,
-                        activeforeground='red', activebackground='black', image=greenphoto, compound = 'right',pady=50)
+            Greenbox=tk.Radiobutton(canvasvillano_2, text="Green  Lantern", variable=vil, value=4, bg='grey',command=villanos)
             Greenbox.place(x=0,y=0)
             Greenbox.lift()
     def hawkvillano():
              
-            Hawkbox=tk.Checkbutton(canvasvillano_3,text='Hawkgirl ',variable=h, onvalue=1, offvalue=0, 
-                        font=('Oswald ',12),bg= 'grey', fg='black',width=220,height=100,
-                        activeforeground='red', activebackground='black', image=hawkphoto, compound = 'right',pady=50)
+            Hawkbox=tk.Radiobutton(canvasvillano_3, text="Hawkgirl", variable=vil, value=5, bg='grey',command=villanos)
             Hawkbox.place(x=0,y=0)
             Hawkbox.lift()
     def martianvillano():
              
-            Martianbox=tk.Checkbutton(canvasvillano_1,text='Martian Manhunter ',variable=mm, onvalue=1, offvalue=0, 
-                        font=('Oswald ',12),bg= 'grey', fg='black',width=220,height=100,
-                        activeforeground='red', activebackground='black', image=martianphoto, compound = 'right',pady=50)
+            Martianbox=tk.Radiobutton(canvasvillano_1, text="Martian Manhunter", variable=vil, value=6, bg='grey',command=villanos)
             Martianbox.place(x=0,y=0)
             Martianbox.lift()
     def canaryvillano():
              
-            Canarybox=tk.Checkbutton(canvasvillano_2,text='Black Canary ',variable=ca, onvalue=1, offvalue=0, 
-                        font=('Oswald ',12),bg= 'grey', fg='black',width=220,height=100,
-                        activeforeground='red', activebackground='black', image=canaryphoto, compound = 'right',pady=50)
+            Canarybox=tk.Radiobutton(canvasvillano_2, text="Black Canary", variable=vil, value=7, bg='grey',command=villanos)
             Canarybox.place(x=0,y=0)
             Canarybox.lift()
     def zatannavillano():
              
-            Zatannabox=tk.Checkbutton(canvasvillano_3,text='Zatanna ',variable=z, onvalue=1, offvalue=0, 
-                        font=('Oswald ',12),bg= 'grey', fg='black',width=220,height=100,
-                        activeforeground='red', activebackground='black', image=zatannaphoto, compound = 'right',pady=50)
+            Zatannabox=tk.Radiobutton(canvasvillano_3, text="Zatanna", variable=vil, value=8, bg='grey',command=villanos)
             Zatannabox.place(x=0,y=0)
             Zatannabox.lift()
     def arrowvillano():
              
-            Arrowbox=tk.Checkbutton(canvasvillano_1,text='Green Arrow ',variable=a, onvalue=1, offvalue=0, 
-                        font=('Oswald ',12),bg= 'grey', fg='black',width=220,height=100,
-                        activeforeground='red', activebackground='black', image=arrowphoto, compound = 'right',pady=50)
+            Arrowbox=tk.Radiobutton(canvasvillano_1, text="Green Arrow", variable=vil, value=9, bg='grey',command=villanos)
             Arrowbox.place(x=0,y=0)
             Arrowbox.lift()
     def goldvillano():
              
-            Goldox=tk.Checkbutton(canvasvillano_2,text='Booster Gold ',variable=bg, onvalue=1, offvalue=0, 
-                        font=('Oswald ',12),bg= 'grey', fg='black',width=220,height=100,
-                        activeforeground='red', activebackground='black', image=goldphoto, compound = 'right',pady=50)
+            Goldbox=tk.Radiobutton(canvasvillano_2, text="Booster Gold", variable=vil, value=10, bg='grey',command=villanos)
             Goldbox.place(x=0,y=0)
             Goldbox.lift()
     def marvelvillano():
              
-            Marvelbox=tk.Checkbutton(canvasvillano_3,text='Captain Marvel ',variable=m, onvalue=1, offvalue=0, 
-                        font=('Oswald ',12),bg= 'grey', fg='black',width=220,height=100,
-                        activeforeground='red', activebackground='black', image=marvelphoto, compound = 'right',pady=50)
+            Marvelbox=tk.Radiobutton(canvasvillano_3, text="Captain Marvel", variable=vil, value=11, bg='grey',command=villanos)
             Marvelbox.place(x=0,y=0)
             Marvelbox.lift()
     def nightvillano():
              
-            Nightbox=tk.Checkbutton(canvasvillano_1,text='Nightwing ',variable=nw, onvalue=1, offvalue=0, 
-                        font=('Oswald ',12),bg= 'grey', fg='black',width=220,height=100,
-                        activeforeground='red', activebackground='black', image=nightphoto, compound = 'right',pady=50)
+            Nightbox=tk.Radiobutton(canvasvillano_1, text="Captain Marvel", variable=vil, value=12, bg='grey',command=villanos)
             Nightbox.place(x=0,y=0)
             Nightbox.lift()
     def supgvillano():
              
-            Supgbox=tk.Checkbutton(canvasvillano_2,text='Supergirl',variable=sg, onvalue=1, offvalue=0, 
-                        font=('Oswald ',12),bg= 'grey', fg='black',width=220,height=100,
-                        activeforeground='red', activebackground='black', image=supgphoto, compound = 'right',pady=50)
+            Supgbox=tk.Radiobutton(canvasvillano_2, text="Supergirl", variable=vil, value=13, bg='grey',command=villanos)
             Supgbox.place(x=0,y=0)
             Supgbox.lift()
 
     def aquavillano():
              
-            Aquabox=tk.Checkbutton(canvasvillano_3,text='Aquaman',variable=aq, onvalue=1, offvalue=0, 
-                        font=('Oswald ',12),bg= 'grey', fg='black',width=220,height=100,
-                        activeforeground='red', activebackground='black', image=aquaphoto, compound = 'right',pady=50)
+            Aquabox=tk.Radiobutton(canvasvillano_3, text="Aquaman", variable=vil, value=14, bg='grey',command=villanos)
             Aquabox.place(x=0,y=0)    
             Aquabox.lift()
             
@@ -312,9 +318,14 @@ def principalis():
     mapatitulo.place(x=120,y=10)
 
     def volver():
-        canvasvillano_1.delete('all')
-        canvasvillano_2.delete('all')
-        canvasvillano_3.delete('all')
+        for widget in canvasvillano_1.winfo_children():
+            widget.destroy()
+
+        for widget in canvasvillano_2.winfo_children():
+            widget.destroy()
+
+        for widget in canvasvillano_3.winfo_children():
+            widget.destroy()
         boton_mapa.lift()
         texto_ubicacion_uno.lift()
         fonduno_original=Image.open('fondo.png')
@@ -338,9 +349,14 @@ def principalis():
         villanotres =random.choice(posiblesvillanos_3)
         villanotres()
     def siguiente_4():
-        canvasvillano_1.delete('all')
-        canvasvillano_2.delete('all')
-        canvasvillano_3.delete('all')
+        for widget in canvasvillano_1.winfo_children():
+            widget.destroy()
+
+        for widget in canvasvillano_2.winfo_children():
+            widget.destroy()
+
+        for widget in canvasvillano_3.winfo_children():
+            widget.destroy()
         texto_ubicacion_uno=tk.Label(venjuego,text=('Atalaya                                      '),bg='black',fg='white',font=('Papyrus',12), compound='bottom')
         texto_ubicacion_uno.place(x=100,y=200)
         boton_mapa_4=tk.Button(canvasmapa, text='Siguiente',command=volver)
@@ -366,9 +382,14 @@ def principalis():
         villanotres =random.choice(posiblesvillanos_3)
         villanotres()
     def siguiente_3():
-        canvasvillano_1.delete('all')
-        canvasvillano_2.delete('all')
-        canvasvillano_3.delete('all')
+        for widget in canvasvillano_1.winfo_children():
+            widget.destroy()
+
+        for widget in canvasvillano_2.winfo_children():
+            widget.destroy()
+
+        for widget in canvasvillano_3.winfo_children():
+            widget.destroy()
         texto_ubicacion_uno=tk.Label(venjuego,text=('Sala de Entrenamiento'),bg='black',fg='white',font=('Papyrus',12), compound='bottom')
         texto_ubicacion_uno.place(x=100,y=200)
         boton_mapa_4=tk.Button(canvasmapa, text='Siguiente',command=siguiente_4)
@@ -394,9 +415,14 @@ def principalis():
         villanotres =random.choice(posiblesvillanos_3)
         villanotres()
     def siguiente_2():
-        canvasvillano_1.delete('all')
-        canvasvillano_2.delete('all')
-        canvasvillano_3.delete('all')
+        for widget in canvasvillano_1.winfo_children():
+            widget.destroy()
+
+        for widget in canvasvillano_2.winfo_children():
+            widget.destroy()
+
+        for widget in canvasvillano_3.winfo_children():
+            widget.destroy()
         texto_ubicacion_uno=tk.Label(venjuego,text=('Sala de Reuniones'),bg='black',fg='white',font=('Papyrus',12), compound='bottom')
         texto_ubicacion_uno.place(x=100,y=200)
         boton_mapa_3=tk.Button(canvasmapa, text='Siguiente',command=siguiente_3)
@@ -422,9 +448,14 @@ def principalis():
         villanotres =random.choice(posiblesvillanos_3)
         villanotres()
     def siguiente_1():
-        canvasvillano_1.delete('all')
-        canvasvillano_2.delete('all')
-        canvasvillano_3.delete('all')
+        for widget in canvasvillano_1.winfo_children():
+            widget.destroy()
+
+        for widget in canvasvillano_2.winfo_children():
+            widget.destroy()
+
+        for widget in canvasvillano_3.winfo_children():
+            widget.destroy()
         texto_ubicacion_uno=tk.Label(venjuego,text=('Salón de la Justicia'),bg='black',fg='white',font=('Papyrus',12), compound='bottom')
         texto_ubicacion_uno.place(x=100,y=200)
         boton_mapa_2=tk.Button(canvasmapa, text='Siguiente',command=siguiente_2)
@@ -467,11 +498,6 @@ def principalis():
     canvasmapa_grande.create_image(0,0,image=fonduno_copy_,anchor=tk.NW)
     canvasmapa_grande.image=fonduno_copy_
 
-    
-    
-
-    
-        
     if (av.get())==0:
         opcionuno=Image.open('opcionuno_dos.png')
         avataruno=opcionuno.resize((50,50))
@@ -490,29 +516,39 @@ def principalis():
         uno=ImageTk.PhotoImage(avataruno)
         canvasmenu.create_image(10,10,image=uno,anchor=tk.NW)
         canvasmenu.image=uno
+
+
+    def defender():
+        time.sleep(3)
+        resist.place(y=90000)
+        fight.place(x=600, y=600)
+    def atacar():
+        fight.place(x=100000000000000000000000)
+        time.sleep(3)
+        resist.place(x=600, y=600)
+        resist.lift()
         
-    
+    resist=tk.Button(venjuego, text=('Defender'), command=defender)
+    fight=tk.Button(venjuego, text=('  Atacar  '), command=atacar)
+    fight.place(x=600, y=600)
   
     jugables()
-        
+    villanos() 
     venjuego.mainloop()
 #--------------------------------------------------------------------------------
 #VentanaPrincipal
 #----------------------------------------------------------------------------------------------
 window=tk.Tk()
 window.geometry('1500x700')
-window.title('Las Aventuras del estudiante')
+window.title('Proyecto Intro')
 window.resizable(False,False)
-fondo=tk.PhotoImage(file='fondo.png')
-fondo=tk.Label(window,image=fondo)
-fondo.place(relheight=1, relwidth=1, x=0, y=0 )
 
 about = tk.Button(window,text=('About'),font=('Papyrus',12),command=funcionabout.botonabout)
 about.pack()
 
-
 instruccion=tk.Label(window,text=('Introduzca su nombre'), font=('Papyrus',12,'bold'))
 instruccion.pack()
+
 def prograbotonuser():
     user=usuario.get()
     if user!='':
@@ -520,8 +556,7 @@ def prograbotonuser():
         usuariovisible.config(text= 'Super-'+user,font=('Papyrus',18))
     else:
         ''
-    
-    
+        
 botonuser=tk.Button(window,text=('Aceptar'), font=('Papyrus',12),command=prograbotonuser)
 
 usuario = tk.Entry()

@@ -34,83 +34,80 @@ def principalis():
     ps=tk.IntVar()
     vil=tk.IntVar()
     botones_villanos={}
-    def villanos():
-        
-        
-        print(villanosavencer)
+    
 
     def supvillano():
-            Supbox=tk.Radiobutton(canvasvillano_1, text="Superman",image=supphoto, variable=vil, value=0,bg='grey',command=villanos)
+            Supbox=tk.Radiobutton(canvasvillano_1, text="Superman",image=supphoto, variable=vil, value=0,bg='grey' )
             Supbox.place(x=0,y=0)
             Supbox.lift()
             botones_villanos[0] = Supbox
     def batvillano():
-            Batbox=tk.Radiobutton(canvasvillano_2, text="Batman", variable=vil, value=1,bg='grey',command=villanos)
+            Batbox=tk.Radiobutton(canvasvillano_2, text="Batman", variable=vil, value=1,bg='grey' )
             Batbox.place(x=0,y=0)
             Batbox.lift()
             botones_villanos[1] = Batbox
     def wondervillano():    
-            Wobox=tk.Radiobutton(canvasvillano_3, text="Wonder Woman", variable=vil, value=2,bg='grey',command=villanos)
+            Wobox=tk.Radiobutton(canvasvillano_3, text="Wonder Woman", variable=vil, value=2,bg='grey' )
             Wobox.place(x=0,y=0)
             Wobox.lift()
             botones_villanos[2] = Wobox
     def flashvillano():
-            Flashbox=tk.Radiobutton(canvasvillano_1, text="Flash", variable=vil, value=3, bg='grey',command=villanos)
+            Flashbox=tk.Radiobutton(canvasvillano_1, text="Flash", variable=vil, value=3, bg='grey' )
             Flashbox.place(x=0,y=0)
             Flashbox.lift()
             botones_villanos[3] = Flashbox
     def greenvillano():
-            Greenbox=tk.Radiobutton(canvasvillano_2, text="Green  Lantern", variable=vil, value=4, bg='grey',command=villanos)
+            Greenbox=tk.Radiobutton(canvasvillano_2, text="Green  Lantern", variable=vil, value=4, bg='grey' )
             Greenbox.place(x=0,y=0)
             Greenbox.lift()
             botones_villanos[4] = Greenbox
     def hawkvillano():
-            Hawkbox=tk.Radiobutton(canvasvillano_3, text="Hawkgirl", variable=vil, value=5, bg='grey',command=villanos)
+            Hawkbox=tk.Radiobutton(canvasvillano_3, text="Hawkgirl", variable=vil, value=5, bg='grey' )
             Hawkbox.place(x=0,y=0)
             Hawkbox.lift()
             botones_villanos[5] = Hawkbox
     def martianvillano():
-            Martianbox=tk.Radiobutton(canvasvillano_1, text="Martian Manhunter", variable=vil, value=6, bg='grey',command=villanos)
+            Martianbox=tk.Radiobutton(canvasvillano_1, text="Martian Manhunter", variable=vil, value=6, bg='grey' )
             Martianbox.place(x=0,y=0)
             Martianbox.lift()
             botones_villanos[6] = Martianbox
     def canaryvillano():
-            Canarybox=tk.Radiobutton(canvasvillano_2, text="Black Canary", variable=vil, value=7, bg='grey',command=villanos)
+            Canarybox=tk.Radiobutton(canvasvillano_2, text="Black Canary", variable=vil, value=7, bg='grey' )
             Canarybox.place(x=0,y=0)
             Canarybox.lift()
             botones_villanos[7] = Canarybox
     def zatannavillano():
-            Zatannabox=tk.Radiobutton(canvasvillano_3, text="Zatanna", variable=vil, value=8, bg='grey',command=villanos)
+            Zatannabox=tk.Radiobutton(canvasvillano_3, text="Zatanna", variable=vil, value=8, bg='grey' )
             Zatannabox.place(x=0,y=0)
             Zatannabox.lift()
             botones_villanos[8] = Zatannabox
     def arrowvillano():
-            Arrowbox=tk.Radiobutton(canvasvillano_1, text="Green Arrow", variable=vil, value=9, bg='grey',command=villanos)
+            Arrowbox=tk.Radiobutton(canvasvillano_1, text="Green Arrow", variable=vil, value=9, bg='grey' )
             Arrowbox.place(x=0,y=0)
             Arrowbox.lift()
             botones_villanos[9] = Arrowbox
     def goldvillano():
-            Goldbox=tk.Radiobutton(canvasvillano_2, text="Booster Gold", variable=vil, value=10, bg='grey',command=villanos)
+            Goldbox=tk.Radiobutton(canvasvillano_2, text="Booster Gold", variable=vil, value=10, bg='grey' )
             Goldbox.place(x=0,y=0)
             Goldbox.lift()
             botones_villanos[10] = Goldbox
     def marvelvillano():            
-            Marvelbox=tk.Radiobutton(canvasvillano_3, text="Captain Marvel", variable=vil, value=11, bg='grey',command=villanos)
+            Marvelbox=tk.Radiobutton(canvasvillano_3, text="Captain Marvel", variable=vil, value=11, bg='grey' )
             Marvelbox.place(x=0,y=0)
             Marvelbox.lift()
             botones_villanos[11] = Marvelbox
     def nightvillano():
-            Nightbox=tk.Radiobutton(canvasvillano_1, text="Nightwing", variable=vil, value=12, bg='grey',command=villanos)
+            Nightbox=tk.Radiobutton(canvasvillano_1, text="Nightwing", variable=vil, value=12, bg='grey' )
             Nightbox.place(x=0,y=0)
             Nightbox.lift()
             botones_villanos[12] = Nightbox
     def supgvillano():
-            Supgbox=tk.Radiobutton(canvasvillano_2, text="Supergirl", variable=vil, value=13, bg='grey',command=villanos)
+            Supgbox=tk.Radiobutton(canvasvillano_2, text="Supergirl", variable=vil, value=13, bg='grey' )
             Supgbox.place(x=0,y=0)
             Supgbox.lift()
             botones_villanos[13] = Supgbox
     def aquavillano():
-            Aquabox=tk.Radiobutton(canvasvillano_3, text="Aquaman", variable=vil, value=14, bg='grey',command=villanos)
+            Aquabox=tk.Radiobutton(canvasvillano_3, text="Aquaman", variable=vil, value=14, bg='grey' )
             Aquabox.place(x=0,y=0)    
             Aquabox.lift()
             botones_villanos[14] = Aquabox
@@ -177,112 +174,81 @@ def principalis():
 
     villanosavencer=[(villanouno),(villanodos),(villanotres)]            
     
-    def seleccionado():
-            if ps.get()==0:
-                print ('Superman')
-            elif ps.get()==1:
-                print ('Batman')
-            elif ps.get()==2:
-                print('Wonder Woman')
-            elif ps.get()==3:
-                print('Flash')
-            elif ps.get()==4:
-                print('Green Lantern')
-            elif ps.get()==5:
-                print('Hawkgril')
-            elif ps.get()==6:
-                print('Martian')
-            elif ps.get()==7:
-                print('Canary')
-            elif ps.get()==8:
-                print('Zatanna')
-            elif ps.get()==9:
-                print('Arrow')
-            elif ps.get()==10:
-                print('Booster')
-            elif ps.get()==11:
-                print('Marvel')
-            elif ps.get()==12:
-                print('Nightwing')
-            elif ps.get()==13:
-                print('Supergirl')
-            elif ps.get()==14:
-                print('Aquaman')
-            
+    
+    botones_heroes={}        
             
     if (s.get())==1:
-            rb1 = tk.Radiobutton(sub_canvas_menu, text="Superman",image=supphoto, variable=ps, value=0,bg='grey',command=seleccionado)
-            rb1.pack(anchor='w')            
-                    
+            Supper = tk.Radiobutton(sub_canvas_menu, text="Superman",image=supphoto, variable=ps, value=0,bg='grey')
+            Supper.pack(anchor='w')            
+            botones_heroes[0] = Supper       
     if (b.get())==1:
-            rb2 = tk.Radiobutton(sub_canvas_menu, text="Batman", variable=ps, value=1, bg='grey',command=seleccionado)
-            rb2.pack(anchor='w')
-
+            Batper = tk.Radiobutton(sub_canvas_menu, text="Batman", variable=ps, value=1, bg='grey')
+            Batper.pack(anchor='w')
+            botones_heroes[1] = Batper
     
     if (w.get())==1:
-            rb1 = tk.Radiobutton(sub_canvas_menu, text="Wonder Woman", variable=ps, value=2,bg='grey',command=seleccionado)
-            rb1.pack(anchor='w')
+            Woper = tk.Radiobutton(sub_canvas_menu, text="Wonder Woman", variable=ps, value=2,bg='grey')
+            Woper.pack(anchor='w')
+            botones_heroes[2] = Woper
              
-    
     if (f.get())==1:
-            rb2 = tk.Radiobutton(sub_canvas_menu, text="Flash", variable=ps, value=3, bg='grey',command=seleccionado)
-            rb2.pack(anchor='w')
-             
+            Fper = tk.Radiobutton(sub_canvas_menu, text="Flash", variable=ps, value=3, bg='grey')
+            Fper.pack(anchor='w')
+            botones_heroes[3] = Fper
     
     if (g.get())==1:
-            rb2 = tk.Radiobutton(sub_canvas_menu, text="Green  Lantern", variable=ps, value=4, bg='grey',command=seleccionado)
-            rb2.pack(anchor='w')
-
+            Greenper= tk.Radiobutton(sub_canvas_menu, text="Green  Lantern", variable=ps, value=4, bg='grey')
+            Greenper.pack(anchor='w')
+            botones_heroes[4] = Greenper
              
     if (h.get())==1:
-            rb2 = tk.Radiobutton(sub_canvas_menu, text="Hawkgirl", variable=ps, value=5, bg='grey',command=seleccionado)
-            rb2.pack(anchor='w')
-             
+            Hawkper = tk.Radiobutton(sub_canvas_menu, text="Hawkgirl", variable=ps, value=5, bg='grey')
+            Hawkper.pack(anchor='w')
+            botones_heroes[5] = Hawkper
         
     if (mm.get())==1:
-            rb2 = tk.Radiobutton(sub_canvas_menu, text="Martian Manhunter", variable=ps, value=6, bg='grey',command=seleccionado)
-            rb2.pack(anchor='w')
-             
+            Marper = tk.Radiobutton(sub_canvas_menu, text="Martian Manhunter", variable=ps, value=6, bg='grey')
+            Marper.pack(anchor='w')
+            botones_heroes[6] = Marper
         
     if (ca.get())==1:
-            rb2 = tk.Radiobutton(sub_canvas_menu, text="Black Canary", variable=ps, value=7, bg='grey',command=seleccionado)
-            rb2.pack(anchor='w')
-             
+            Canper = tk.Radiobutton(sub_canvas_menu, text="Black Canary", variable=ps, value=7, bg='grey')
+            Canper.pack(anchor='w')
+            botones_heroes[7] = Canper 
 
     if (z.get())==1:
-            rb2 = tk.Radiobutton(sub_canvas_menu, text="Zatanna", variable=ps, value=8, bg='grey',command=seleccionado)
-            rb2.pack(anchor='w')
-             
+            Zper = tk.Radiobutton(sub_canvas_menu, text="Zatanna", variable=ps, value=8, bg='grey')
+            Zper.pack(anchor='w')
+            botones_heroes[8] = Zper
 
     if (a.get())==1:
-            rb2 = tk.Radiobutton(sub_canvas_menu, text="Green Arrow", variable=ps, value=9, bg='grey',command=seleccionado)
-            rb2.pack(anchor='w')
-             
+            Arrper = tk.Radiobutton(sub_canvas_menu, text="Green Arrow", variable=ps, value=9, bg='grey')
+            Arrper.pack(anchor='w')
+            botones_heroes[9] = Arrper 
         
     if (bg.get())==1:
-            rb2 = tk.Radiobutton(sub_canvas_menu, text="Booster Gold", variable=ps, value=10, bg='grey',command=seleccionado)
-            rb2.pack(anchor='w')
-             
+            Gper = tk.Radiobutton(sub_canvas_menu, text="Booster Gold", variable=ps, value=10, bg='grey')
+            Gper.pack(anchor='w')
+            botones_heroes[10] = Gper
             
     if (m.get())==1:
-            rb2 = tk.Radiobutton(sub_canvas_menu, text="Captain Marvel", variable=ps, value=11, bg='grey',command=seleccionado)
-            rb2.pack(anchor='w')
-        
+            Capper = tk.Radiobutton(sub_canvas_menu, text="Captain Marvel", variable=ps, value=11, bg='grey')
+            Capper.pack(anchor='w')
+            botones_heroes[11] = Capper
             
     if (nw.get())==1:
-            rb2 = tk.Radiobutton(sub_canvas_menu, text="Captain Marvel", variable=ps, value=12, bg='grey',command=seleccionado)
-            rb2.pack(anchor='w')
-        
-            
+            Nightper = tk.Radiobutton(sub_canvas_menu, text="Nightwing", variable=ps, value=12, bg='grey')
+            Nightper.pack(anchor='w')
+            botones_heroes[12] = Nightper
             
     if (sg.get())==1:
-            rb2 = tk.Radiobutton(sub_canvas_menu, text="Supergirl", variable=ps, value=13, bg='grey',command=seleccionado)
-            rb2.pack(anchor='w')
-        
+            Girlper = tk.Radiobutton(sub_canvas_menu, text="Supergirl", variable=ps, value=13, bg='grey')
+            Girlper.pack(anchor='w')
+            botones_heroes[13] = Girlper
     if (aq.get())==1:
-            rb2 = tk.Radiobutton(sub_canvas_menu, text="Aquaman", variable=ps, value=14, bg='grey',command=seleccionado)
-            rb2.pack(anchor='w')
-        
+            Pezper = tk.Radiobutton(sub_canvas_menu, text="Aquaman", variable=ps, value=14, bg='grey')
+            Pezper.pack(anchor='w')
+            botones_heroes[14] = Aquaper
     
 
     canvasmapa=tk.Canvas(venjuego,bg='black',width=300,height=300)
@@ -494,11 +460,8 @@ def principalis():
     y=vil.get()
     
     
-    def defender():
-        time.sleep(3)
-        resist.place(y=90000)
-        fight.place(x=600, y=600)
-        personajes={}
+   
+    
     personajes={}
     
     def cargar_personajes():
@@ -518,8 +481,31 @@ def principalis():
         archivo.close()
 
     cargar_personajes()
-        
+    
+    def defender():
+        time.sleep(3)
+        resist.place(y=90000)
+        fight.place(x=600, y=600)
+        id_villano = ps.get()
+        id_heroe = vil.get()
+
+        heroe = personajes[id_heroe]
+        villano = personajes[id_villano]
+        daño = heroe['ataque'] - villano['defensa']
+        villano['vida'] = villano['vida'] - daño
+        if villano['vida']<0:
+            print("Heroe:", villano["nombre"])
+            print('K.O.')
+            
+            botones_heroes[id_villano].destroy()
+            
+        else:
+            print("Heroe:", villano["nombre"])
+            print("Heroe:", villano['vida'])
     def atacar():
+        time.sleep(3)
+        resist.place(x=600,y=600)
+        fight.place(x=190678)
         id_heroe = ps.get()
         id_villano = vil.get()
 
@@ -531,17 +517,10 @@ def principalis():
             print("Villano:", villano["nombre"])
             print('K.O.')
             botones_villanos[id_villano].destroy()
+            
         else:
             print("Villano:", villano["nombre"])
             print("Vida villano:", villano['vida'])
-        
-
-       
-
-        
-
-       
-
         
       
         
@@ -549,8 +528,8 @@ def principalis():
     fight=tk.Button(venjuego, text=('  Atacar  '), command=atacar)
     fight.place(x=600, y=600)
   
-    seleccionado()
-    villanos() 
+    
+     
     venjuego.mainloop()
 #--------------------------------------------------------------------------------
 #VentanaPrincipal

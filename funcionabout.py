@@ -1,6 +1,5 @@
 import tkinter as tk
-n=
-El presente documento describe la creación, el funcionamiento y todas las generalidades de un proyecto que consistía en realizar un juego de combate por turnos en Python. Este proyecto se basa principalmente en la biblioteca de Tkinter en Python. Esta permite diseñar interfaces gráficas sencillas, lo que fue de gran ayuda en la realización del proyecto. La idea del juego es la siguiente: el jugador ingresa su nombre y selecciona tres personajes de una lista de quince, para luego enfrentarse a todos los otros a lo largo de cinco niveles. Cada personaje tiene atributos de vida, ataque y defensa, lo que permite que los enfrentamientos sean interesantes y diferentes entre sí. Los turnos se dividen en uno de ataque y uno de defensa, al estilo Pokemon. Al final, el objetivo del juego es llegar hasta el último nivel, tras haber derrotado a quince enemigos. Estos enemigos se pueden repetir y verdaderamente no hay que necesariamente vencerlos a todos para ganar.
+n=('El presente documento describe la creación, el funcionamiento y todas las generalidades de un proyecto que consistía en realizar un juego de combate por turnos en Python. Este proyecto se basa principalmente en la biblioteca de Tkinter en Python. Esta permite diseñar interfaces gráficas sencillas, lo que fue de gran ayuda en la realización del proyecto. La idea del juego es la siguiente: el jugador ingresa su nombre y selecciona tres personajes de una lista de quince, para luego enfrentarse a todos los otros a lo largo de cinco niveles. Cada personaje tiene atributos de vida, ataque y defensa, lo que permite que los enfrentamientos sean interesantes y diferentes entre sí. Los turnos se dividen en uno de ataque y uno de defensa, al estilo Pokemon. Al final, el objetivo del juego es llegar hasta el último nivel, tras haber derrotado a quince enemigos. Estos enemigos se pueden repetir y verdaderamente no hay que necesariamente vencerlos a todos para ganar.
 Dentro del proyecto se usan los personajes de la Liga de la Justicia, de DC Comics como personajes jugables y enemigos. Cada personaje tiene atributos de acorde a sus niveles de poder.
 La realización de este proyecto requería aplicar los conocimientos aprendidos en la clase de Introducción a la Programación, como el uso de listas, funciones, recursividad y variables. Así mismo, también era necesario aprender de temas como el uso de Tkinter y todas sus funcionalidades, diccionarios, lectura de archivos CSV y entre otros.
 
@@ -107,9 +106,10 @@ Commit That Line! (2021, 23 mayo). ¿Cómo usar CLASES en PYTHON? [Vídeo]. YouT
 Python tkinter tutorial for beginners 🐍. (s. f.). YouTube. https://www.youtube.com/playlist?list=PLZPZq0r_RZOOeQBaP5SeMjl2nwDcJaV0T 
 Código Espinoza - Automatiza tu Vida. (2023, 29 mayo). Curso de Tkinter Python: ¿Cómo Cargar y Manipular Imágenes en Tkinter con Python? con PIL! | E12 [Vídeo]. YouTube. https://www.youtube.com/watch?v=Rxq1C1Usq3U 
 
-Corey Schafer. (2017, 9 agosto). Python Tutorial: CSV Module - How to Read, Parse, and Write CSV Files [Vídeo]. YouTube. https://www.youtube.com/watch?v=q5uM4VKywbA
+Corey Schafer. (2017, 9 agosto). Python Tutorial: CSV Module - How to Read, Parse, and Write CSV Files [Vídeo]. YouTube. https://www.youtube.com/watch?v=q5uM4VKywbA''')
 
-"
+
+
 def botonabout():
     venab=tk.Tk()
     venab.geometry('800x600')

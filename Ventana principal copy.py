@@ -18,8 +18,8 @@ def principalis():
     puntostitulo=tk.Label(canvasmenu, text=('Puntaje:'),bg='grey')
     puntaje=3
     puntos=tk.Label(canvasmenu, text=(puntaje),bg='grey')
-    puntostitulo.place(x=200,y=10)
-    puntos.place(x=200,y=30)
+    puntostitulo.place(x=100,y=40)
+    puntos.place(x=100,y=60)
     canvasmenu.place(x=0, y=310)
     
     
@@ -189,7 +189,9 @@ def principalis():
     villanotres =random.choice(posiblesvillanos_3)
     villanotres()
 
-    villanosavencer=[(villanouno),(villanodos),(villanotres)]            
+    villanosavencer=[villanouno,villanodos,villanotres]
+    malomalisimo=random.choice(villanosavencer)
+    vil.set(malomalisimo)
     
     
     botones_heroes={}        
@@ -304,12 +306,12 @@ def principalis():
         ganaste=tk.Canvas(venjuego,width=1500,height=780,text='GANASTE,GRACIAS POR JUGAR ', font=('Arial',40))
         ganaste.pack
     def sub_volver():
-        tapar=tk.Label(venjuego,text=('                                              '))
+        tapar=tk.Label(venjuego,text=('                                                                            '))
         tapar.place(x=1000,y=600)
         if puntaje==18:
             volver()
         else:
-            advertencia=tk.Label(venjuego,text=('Esta ronda no ha acabado'))
+            advertencia=tk.Label(venjuego,text=('Esta ronda no ha acabado                                          '))
             advertencia.place(x=1000,y=600)
     def siguiente_4():
         cargar_personajes()
@@ -349,12 +351,12 @@ def principalis():
         villanotres =random.choice(posiblesvillanos_3)
         villanotres()
     def sub_siguiente_4():
-        tapar=tk.Label(venjuego,text=('                                             '))
+        tapar=tk.Label(venjuego,text=('                                                                      '))
         tapar.place(x=1000,y=600)
         if puntaje==15:
             siguiente_4()
         else:
-            advertencia=tk.Label(venjuego,text=('Esta ronda no ha acabado'))
+            advertencia=tk.Label(venjuego,text=('Esta ronda no ha acabado                                 '))
             advertencia.place(x=1000,y=600)
     def siguiente_3():
         cargar_personajes()
@@ -394,12 +396,12 @@ def principalis():
         villanotres =random.choice(posiblesvillanos_3)
         villanotres()
     def sub_siguiente_3():
-        tapar=tk.Label(venjuego,text=('                                         '))
+        tapar=tk.Label(venjuego,text=('                                                                      '))
         tapar.place(x=1000,y=600)
         if puntaje==12:
             siguiente_3()
         else:
-            advertencia=tk.Label(venjuego,text=('Esta ronda no ha acabado'))
+            advertencia=tk.Label(venjuego,text=('Esta ronda no ha acabado                                     '))
             advertencia.place(x=1000,y=600)
     def siguiente_2():
         cargar_personajes()
@@ -439,12 +441,12 @@ def principalis():
         villanotres =random.choice(posiblesvillanos_3)
         villanotres()
     def sub_siguiente_2():
-        tapar=tk.Label(venjuego,text=('                                     '))
+        tapar=tk.Label(venjuego,text=('                                                                                 '))
         tapar.place(x=1000,y=600)
         if puntaje==9:
             siguiente_2()
         else:
-            advertencia=tk.Label(venjuego,text=('Esta ronda no ha acabado'))
+            advertencia=tk.Label(venjuego,text=('Esta ronda no ha acabado                             '))
             advertencia.place(x=1000,y=600)
         
     def siguiente_1():
@@ -484,12 +486,12 @@ def principalis():
         villanotres =random.choice(posiblesvillanos_3)
         villanotres()
     def sub_siguiente_1():
-        tapar=tk.Label(venjuego,text=('                                      '))
+        tapar=tk.Label(venjuego,text=('                                                                               '))
         tapar.place(x=1000,y=600)
         if puntaje==6:
             siguiente_1()
         else:
-            advertencia=tk.Label(venjuego,text=('Esta ronda no ha acabado'))
+            advertencia=tk.Label(venjuego,text=('Esta ronda no ha acabado                            '))
             advertencia.place(x=1000,y=600)
         
         
@@ -582,12 +584,12 @@ def principalis():
             id_villano=ps.get()
             heroe = personajes[id_heroe]
             villano=personajes[id_villano]
-            if heroe['vida']<=0 or villano['vida']<=0:
-                advertencia=tk.Label(venjuego,text=('Tu personaje ha muerto, escoje otro'))
-                advertencia.place(x=1000,y=600)
             if heroe['vida']<=0:
                 advertencia=tk.Label(venjuego,text=('Tu personaje ha muerto, escoje otro'))
                 advertencia.place(x=1000,y=600)
+                if villano['vida']<=0:
+                    advertencia=tk.Label(venjuego,text=('Tu personaje ha muerto, escoje otro'))
+                    advertencia.place(x=1000,y=600)
             else:
             
                 time.sleep(3)
@@ -629,10 +631,10 @@ def principalis():
                         botones_villanos[id_villano].destroy()
                         puntaje+=1
                         puntos=tk.Label(canvasmenu, text=(puntaje),bg='grey')
-                        puntostitulo.place(x=200,y=10)
-                        puntos.place(x=200,y=30)
-                        canvasmenu.place(x=0, y=310)
-            
+                        puntostitulo.place(x=100,y=40)
+                        puntos.place(x=100,y=60)
+                        
+           
                     
             
         

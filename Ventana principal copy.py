@@ -16,9 +16,8 @@ def principalis():
     sub_canvas_menu.place(x=10,y=400)
     nombre.place(x=80,y=10)
     puntostitulo=tk.Label(canvasmenu, text=('Puntaje:'),bg='grey')
-    sumapersonajes=(s.get())+(w.get())+(b.get())+(f.get()+(g.get())+(h.get())+(mm.get())+(ca.get())+(z.get())+(a.get())+(bg.get())+(m.get())+(nw.get())+
-                                                  (sg.get())+(aq.get()))
-    puntos=tk.Label(canvasmenu, text=(sumapersonajes),bg='grey')
+    puntaje=3
+    puntos=tk.Label(canvasmenu, text=(puntaje),bg='grey')
     puntostitulo.place(x=200,y=10)
     puntos.place(x=200,y=30)
     canvasmenu.place(x=0, y=310)
@@ -37,7 +36,7 @@ def principalis():
     
 
     def supvillano():
-            Supbox=tk.Radiobutton(canvasvillano_1, text="Superman",image=supphoto, variable=vil, value=0,bg='grey' )
+            Supbox=tk.Radiobutton(canvasvillano_1, text="Superman", variable=vil, value=0,bg='grey' )
             Supbox.place(x=0,y=0)
             Supbox.lift()
             botones_villanos[0] = Supbox
@@ -176,79 +175,79 @@ def principalis():
     
     
     botones_heroes={}        
-            
-    if (s.get())==1:
+    def superheroes():        
+        if (s.get())==1:
             Supper = tk.Radiobutton(sub_canvas_menu, text="Superman",image=supphoto, variable=ps, value=0,bg='grey')
             Supper.pack(anchor='w')            
             botones_heroes[0] = Supper       
-    if (b.get())==1:
+        if (b.get())==1:
             Batper = tk.Radiobutton(sub_canvas_menu, text="Batman", variable=ps, value=1, bg='grey')
             Batper.pack(anchor='w')
             botones_heroes[1] = Batper
     
-    if (w.get())==1:
+        if (w.get())==1:
             Woper = tk.Radiobutton(sub_canvas_menu, text="Wonder Woman", variable=ps, value=2,bg='grey')
             Woper.pack(anchor='w')
             botones_heroes[2] = Woper
              
-    if (f.get())==1:
+        if (f.get())==1:
             Fper = tk.Radiobutton(sub_canvas_menu, text="Flash", variable=ps, value=3, bg='grey')
             Fper.pack(anchor='w')
             botones_heroes[3] = Fper
     
-    if (g.get())==1:
+        if (g.get())==1:
             Greenper= tk.Radiobutton(sub_canvas_menu, text="Green  Lantern", variable=ps, value=4, bg='grey')
             Greenper.pack(anchor='w')
             botones_heroes[4] = Greenper
              
-    if (h.get())==1:
+        if (h.get())==1:
             Hawkper = tk.Radiobutton(sub_canvas_menu, text="Hawkgirl", variable=ps, value=5, bg='grey')
             Hawkper.pack(anchor='w')
             botones_heroes[5] = Hawkper
         
-    if (mm.get())==1:
+        if (mm.get())==1:
             Marper = tk.Radiobutton(sub_canvas_menu, text="Martian Manhunter", variable=ps, value=6, bg='grey')
             Marper.pack(anchor='w')
             botones_heroes[6] = Marper
         
-    if (ca.get())==1:
+        if (ca.get())==1:
             Canper = tk.Radiobutton(sub_canvas_menu, text="Black Canary", variable=ps, value=7, bg='grey')
             Canper.pack(anchor='w')
             botones_heroes[7] = Canper 
 
-    if (z.get())==1:
+        if (z.get())==1:
             Zper = tk.Radiobutton(sub_canvas_menu, text="Zatanna", variable=ps, value=8, bg='grey')
             Zper.pack(anchor='w')
             botones_heroes[8] = Zper
 
-    if (a.get())==1:
+        if (a.get())==1:
             Arrper = tk.Radiobutton(sub_canvas_menu, text="Green Arrow", variable=ps, value=9, bg='grey')
             Arrper.pack(anchor='w')
             botones_heroes[9] = Arrper 
         
-    if (bg.get())==1:
+        if (bg.get())==1:
             Gper = tk.Radiobutton(sub_canvas_menu, text="Booster Gold", variable=ps, value=10, bg='grey')
             Gper.pack(anchor='w')
             botones_heroes[10] = Gper
             
-    if (m.get())==1:
+        if (m.get())==1:
             Capper = tk.Radiobutton(sub_canvas_menu, text="Captain Marvel", variable=ps, value=11, bg='grey')
             Capper.pack(anchor='w')
             botones_heroes[11] = Capper
             
-    if (nw.get())==1:
+        if (nw.get())==1:
             Nightper = tk.Radiobutton(sub_canvas_menu, text="Nightwing", variable=ps, value=12, bg='grey')
             Nightper.pack(anchor='w')
             botones_heroes[12] = Nightper
             
-    if (sg.get())==1:
+        if (sg.get())==1:
             Girlper = tk.Radiobutton(sub_canvas_menu, text="Supergirl", variable=ps, value=13, bg='grey')
             Girlper.pack(anchor='w')
             botones_heroes[13] = Girlper
-    if (aq.get())==1:
+        if (aq.get())==1:
             Pezper = tk.Radiobutton(sub_canvas_menu, text="Aquaman", variable=ps, value=14, bg='grey')
             Pezper.pack(anchor='w')
-            botones_heroes[14] = Aquaper
+            botones_heroes[14] = Pezper
     
 
     canvasmapa=tk.Canvas(venjuego,bg='black',width=300,height=300)
@@ -257,6 +256,7 @@ def principalis():
     mapatitulo.place(x=120,y=10)
 
     def volver():
+        cargar_personajes()
         for widget in canvasvillano_1.winfo_children():
             widget.destroy()
 
@@ -265,6 +265,9 @@ def principalis():
 
         for widget in canvasvillano_3.winfo_children():
             widget.destroy()
+        for widget in sub_canvas_menu.winfo_children():
+            widget.destroy()
+        superheroes()
         boton_mapa.lift()
         texto_ubicacion_uno.lift()
         fonduno_original=Image.open('fondo.png')
@@ -287,7 +290,9 @@ def principalis():
 
         villanotres =random.choice(posiblesvillanos_3)
         villanotres()
+        
     def siguiente_4():
+        cargar_personajes()
         for widget in canvasvillano_1.winfo_children():
             widget.destroy()
 
@@ -296,6 +301,9 @@ def principalis():
 
         for widget in canvasvillano_3.winfo_children():
             widget.destroy()
+        for widget in sub_canvas_menu.winfo_children():
+            widget.destroy()
+        superheroes()
         texto_ubicacion_uno=tk.Label(venjuego,text=('Atalaya                                      '),bg='black',fg='white',font=('Papyrus',12), compound='bottom')
         texto_ubicacion_uno.place(x=100,y=200)
         boton_mapa_4=tk.Button(canvasmapa, text='Siguiente',command=volver)
@@ -321,6 +329,7 @@ def principalis():
         villanotres =random.choice(posiblesvillanos_3)
         villanotres()
     def siguiente_3():
+        cargar_personajes()
         for widget in canvasvillano_1.winfo_children():
             widget.destroy()
 
@@ -329,6 +338,9 @@ def principalis():
 
         for widget in canvasvillano_3.winfo_children():
             widget.destroy()
+        for widget in sub_canvas_menu.winfo_children():
+            widget.destroy()
+        superheroes()
         texto_ubicacion_uno=tk.Label(venjuego,text=('Sala de Entrenamiento'),bg='black',fg='white',font=('Papyrus',12), compound='bottom')
         texto_ubicacion_uno.place(x=100,y=200)
         boton_mapa_4=tk.Button(canvasmapa, text='Siguiente',command=siguiente_4)
@@ -354,6 +366,7 @@ def principalis():
         villanotres =random.choice(posiblesvillanos_3)
         villanotres()
     def siguiente_2():
+        cargar_personajes()
         for widget in canvasvillano_1.winfo_children():
             widget.destroy()
 
@@ -362,6 +375,9 @@ def principalis():
 
         for widget in canvasvillano_3.winfo_children():
             widget.destroy()
+        for widget in sub_canvas_menu.winfo_children():
+            widget.destroy()
+        superheroes()
         texto_ubicacion_uno=tk.Label(venjuego,text=('Sala de Reuniones'),bg='black',fg='white',font=('Papyrus',12), compound='bottom')
         texto_ubicacion_uno.place(x=100,y=200)
         boton_mapa_3=tk.Button(canvasmapa, text='Siguiente',command=siguiente_3)
@@ -386,7 +402,9 @@ def principalis():
 
         villanotres =random.choice(posiblesvillanos_3)
         villanotres()
+        
     def siguiente_1():
+        cargar_personajes()
         for widget in canvasvillano_1.winfo_children():
             widget.destroy()
 
@@ -395,6 +413,9 @@ def principalis():
 
         for widget in canvasvillano_3.winfo_children():
             widget.destroy()
+        for widget in sub_canvas_menu.winfo_children():
+            widget.destroy()
+        superheroes()
         texto_ubicacion_uno=tk.Label(venjuego,text=('Salón de la Justicia'),bg='black',fg='white',font=('Papyrus',12), compound='bottom')
         texto_ubicacion_uno.place(x=100,y=200)
         boton_mapa_2=tk.Button(canvasmapa, text='Siguiente',command=siguiente_2)
@@ -483,52 +504,73 @@ def principalis():
     cargar_personajes()
     
     def defender():
-        time.sleep(3)
-        resist.place(y=90000)
-        fight.place(x=600, y=600)
-        id_villano = ps.get()
-        id_heroe = vil.get()
-
+        tapar=tk.Label(venjuego,text=('                                                                    '))
+        tapar.place(x=800,y=600)
+        
+        
+        id_heroe=vil.get()
+        id_villano=ps.get()
         heroe = personajes[id_heroe]
-        villano = personajes[id_villano]
-        daño = heroe['ataque'] - villano['defensa']
-        villano['vida'] = villano['vida'] - daño
-        if villano['vida']<0:
-            print("Heroe:", villano["nombre"])
-            print('K.O.')
-            
-            botones_heroes[id_villano].destroy()
-            
+        villano=personajes[id_villano]
+        if villano['vida']<=0:
+            advertencia=tk.Label(venjuego,text=('Tu personaje ha muerto, escoje otro'))
+            advertencia.place(x=800,y=600)
+        if heroe['vida']<=0:
+            advertencia=tk.Label(venjuego,text=('Tu personaje ha muerto, escoje otro'))
+            advertencia.place(x=800,y=600)
         else:
-            print("Heroe:", villano["nombre"])
-            print("Heroe:", villano['vida'])
+            time.sleep(3)
+            fight.place(x=600, y=600)
+            daño = heroe['ataque'] - villano['defensa']
+            villano['vida'] = villano['vida'] - daño
+            if villano['vida']<=0:
+                print("Heroe:", villano["nombre"])
+                print('K.O.')
+                print(villano['vida'])
+                botones_heroes[id_villano].destroy()
+            else:   
+                print("Heroe:", villano["nombre"])
+                print("Heroe:", villano['vida'])
     def atacar():
-        time.sleep(3)
-        resist.place(x=600,y=600)
-        fight.place(x=190678)
+        tapar=tk.Label(venjuego,text=('                                                                    '))
+        tapar.place(x=800,y=600)
+        nonlocal puntaje
         id_heroe = ps.get()
         id_villano = vil.get()
-
         heroe = personajes[id_heroe]
         villano = personajes[id_villano]
-        daño = heroe['ataque'] - villano['defensa']
-        villano['vida'] = villano['vida'] - daño
-        if villano['vida']<0:
-            print("Villano:", villano["nombre"])
-            print('K.O.')
-            botones_villanos[id_villano].destroy()
+        if heroe['vida']<=0:
+            advertencia=tk.Label(venjuego,text=('Tu personaje ha muerto, escoje otro'))
+            advertencia.place(x=800,y=600)
             
         else:
-            print("Villano:", villano["nombre"])
-            print("Vida villano:", villano['vida'])
+            time.sleep(3)
+            resist.place(x=600,y=600)
+            fight.place(x=190678)
+            daño = heroe['ataque'] - villano['defensa']
+            villano['vida'] = villano['vida'] - daño
+        
+            if villano['vida']<=0:
+                print("Villano:", villano["nombre"])
+                print('K.O.')
+                botones_villanos[id_villano].destroy()
+                puntaje+=1
+                puntos=tk.Label(canvasmenu, text=(puntaje),bg='grey')
+                puntostitulo.place(x=200,y=10)
+                puntos.place(x=200,y=30)
+                canvasmenu.place(x=0, y=310)
+            
+            else:
+                print("Villano:", villano["nombre"])
+                print("Vida villano:", villano['vida'])
         
       
         
     resist=tk.Button(venjuego, text=('Defender'), command=defender)
-    fight=tk.Button(venjuego, text=('  Atacar  '), command=atacar)
+    fight=tk.Button(venjuego, text=('   Atacar   '), command=atacar)
     fight.place(x=600, y=600)
   
-    
+    superheroes()
      
     venjuego.mainloop()
 #--------------------------------------------------------------------------------
@@ -749,7 +791,7 @@ def paginabatalla():
             window.withdraw()
             principalis()
         else:
-            recordatorio=tk.Label(window,text=('DEBE ESCRIBIR SU NOMBRE'), font=('Papyrus',12,'bold'), fg='black')
+            recordatorio=tk.Label(window,text=('DEBE ESCRIBIR SU NOMBRE                   '), font=('Papyrus',12,'bold'), fg='black')
             recordatorio.place(x=10,y=250)
             
         

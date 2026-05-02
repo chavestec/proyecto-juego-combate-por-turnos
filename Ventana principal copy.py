@@ -290,7 +290,14 @@ def principalis():
 
         villanotres =random.choice(posiblesvillanos_3)
         villanotres()
-        
+    def sub_volver():
+        tapar=tk.Label(venjuego,text=('                                                                    '))
+        tapar.place(x=800,y=600)
+        if puntaje==18:
+            volver()
+        else:
+            advertencia=tk.Label(venjuego,text=('Esta ronda no ha acabado'))
+            advertencia.place(x=800,y=600)
     def siguiente_4():
         cargar_personajes()
         for widget in canvasvillano_1.winfo_children():
@@ -306,7 +313,7 @@ def principalis():
         superheroes()
         texto_ubicacion_uno=tk.Label(venjuego,text=('Atalaya                                      '),bg='black',fg='white',font=('Papyrus',12), compound='bottom')
         texto_ubicacion_uno.place(x=100,y=200)
-        boton_mapa_4=tk.Button(canvasmapa, text='Siguiente',command=volver)
+        boton_mapa_4=tk.Button(canvasmapa, text='Siguiente',command=sub_volver)
         boton_mapa_4.place(x=115,y=230)
         fonata_original=Image.open('fonata.png')
         fonata_resize=fonata_original.resize((130,130))
@@ -328,6 +335,14 @@ def principalis():
 
         villanotres =random.choice(posiblesvillanos_3)
         villanotres()
+    def sub_siguiente_4():
+        tapar=tk.Label(venjuego,text=('                                                                    '))
+        tapar.place(x=800,y=600)
+        if puntaje==15:
+            siguiente_4()
+        else:
+            advertencia=tk.Label(venjuego,text=('Esta ronda no ha acabado'))
+            advertencia.place(x=800,y=600)
     def siguiente_3():
         cargar_personajes()
         for widget in canvasvillano_1.winfo_children():
@@ -343,7 +358,7 @@ def principalis():
         superheroes()
         texto_ubicacion_uno=tk.Label(venjuego,text=('Sala de Entrenamiento'),bg='black',fg='white',font=('Papyrus',12), compound='bottom')
         texto_ubicacion_uno.place(x=100,y=200)
-        boton_mapa_4=tk.Button(canvasmapa, text='Siguiente',command=siguiente_4)
+        boton_mapa_4=tk.Button(canvasmapa, text='Siguiente',command=sub_siguiente_4)
         boton_mapa_4.place(x=115,y=230)
         fondos_original=Image.open('fondos.png')
         fondos_resize=fondos_original.resize((130,130))
@@ -365,6 +380,14 @@ def principalis():
 
         villanotres =random.choice(posiblesvillanos_3)
         villanotres()
+    def sub_siguiente_3():
+        tapar=tk.Label(venjuego,text=('                                                                    '))
+        tapar.place(x=800,y=600)
+        if puntaje==12:
+            siguiente_3()
+        else:
+            advertencia=tk.Label(venjuego,text=('Esta ronda no ha acabado'))
+            advertencia.place(x=800,y=600)
     def siguiente_2():
         cargar_personajes()
         for widget in canvasvillano_1.winfo_children():
@@ -380,7 +403,7 @@ def principalis():
         superheroes()
         texto_ubicacion_uno=tk.Label(venjuego,text=('Sala de Reuniones'),bg='black',fg='white',font=('Papyrus',12), compound='bottom')
         texto_ubicacion_uno.place(x=100,y=200)
-        boton_mapa_3=tk.Button(canvasmapa, text='Siguiente',command=siguiente_3)
+        boton_mapa_3=tk.Button(canvasmapa, text='Siguiente',command=sub_siguiente_3)
         boton_mapa_3.place(x=115,y=230)
         fontres_original=Image.open('fontres.png')
         fontres_resize=fontres_original.resize((130,130))
@@ -402,6 +425,14 @@ def principalis():
 
         villanotres =random.choice(posiblesvillanos_3)
         villanotres()
+    def sub_siguiente_2():
+        tapar=tk.Label(venjuego,text=('                                                                    '))
+        tapar.place(x=800,y=600)
+        if puntaje==9:
+            siguiente_2()
+        else:
+            advertencia=tk.Label(venjuego,text=('Esta ronda no ha acabado'))
+            advertencia.place(x=800,y=600)
         
     def siguiente_1():
         cargar_personajes()
@@ -418,7 +449,7 @@ def principalis():
         superheroes()
         texto_ubicacion_uno=tk.Label(venjuego,text=('Salón de la Justicia'),bg='black',fg='white',font=('Papyrus',12), compound='bottom')
         texto_ubicacion_uno.place(x=100,y=200)
-        boton_mapa_2=tk.Button(canvasmapa, text='Siguiente',command=siguiente_2)
+        boton_mapa_2=tk.Button(canvasmapa, text='Siguiente',command=sub_siguiente_2)
         boton_mapa_2.place(x=115,y=230)
         foncu_original=Image.open('foncu.png')
         foncu_resize=foncu_original.resize((130,130))
@@ -439,8 +470,18 @@ def principalis():
 
         villanotres =random.choice(posiblesvillanos_3)
         villanotres()
+    def sub_siguiente_1():
+        tapar=tk.Label(venjuego,text=('                                                                    '))
+        tapar.place(x=800,y=600)
+        if puntaje==6:
+            siguiente_1()
+        else:
+            advertencia=tk.Label(venjuego,text=('Esta ronda no ha acabado'))
+            advertencia.place(x=800,y=600)
         
-    boton_mapa=tk.Button(canvasmapa, text='Siguiente',command=siguiente_1)
+        
+        
+    boton_mapa=tk.Button(canvasmapa, text='Siguiente',command=sub_siguiente_1)
     boton_mapa.place(x=115,y=230)
     texto_ubicacion_uno=tk.Label(venjuego,text=('Patio Principal'),bg='black',fg='white',font=('Papyrus',12), compound='bottom')
     texto_ubicacion_uno.place(x=100,y=200)
@@ -475,14 +516,7 @@ def principalis():
         avataruno=opcionuno.resize((50,50))
         uno=ImageTk.PhotoImage(avataruno)
         canvasmenu.create_image(10,10,image=uno,anchor=tk.NW)
-        canvasmenu.image=uno
-
-    x=ps.get()
-    y=vil.get()
-    
-    
-   
-    
+        canvasmenu.image=uno    
     personajes={}
     
     def cargar_personajes():

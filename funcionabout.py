@@ -59,18 +59,7 @@ Código generado por IA
 Se utilizó Chat GPT para la evacuación de dudas y para ciertas secciones del código. La IA realizó la función que elimina widgets de un canvas ya que se consideró imposible hacerlo de otra manera. Además, la IA proporcionó ideas de como hacer la selección aleatoria de villanos en cada nivel, aunque esto después se realizó de otra manera
 
 
-Diagrama de Arquitectura Básico
 
-│         APLICACIÓN PRINCIPAL           │
-│   Ventana_principal_copy.py            │
-
-│  Ventana                     │    Ventana Batalla                                  │
-│  Principal                    │         principalis()                                     │
-│  window                      │                                                                                │
-
-│         CAPA DE DATOS                                                                │
-│  Personajes.txt (CSV)  Imágenes PNG                                       │
-│  funcionabout.py                                                                             │
 
 
 Los personajes jugables se escogen en la ventana principal, y luego todo lo demás se maneja en la ventana de batallas, dentro de una función llamada principalis()

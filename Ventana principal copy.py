@@ -53,81 +53,112 @@ def principalis():
                                 
                                 '\nDefensa:' +  str(heroe['defensa']))
     botones_villanos={}
+    villanosavencer=[]
     def supvillano():
-            Supbox=tk.Radiobutton(canvasvillano_1, text="Superman", variable=vil, value=0,bg='grey',command=quienes )
+            Supbox=tk.Radiobutton(canvasvillano_1, text="Superman", variable=vil, value=0,bg='grey',command=quienes, state='disabled',
+                                  disabledforeground="black",selectcolor="grey" )
             Supbox.place(x=0,y=0)
             Supbox.lift()
             botones_villanos[0] = Supbox
+            villanosavencer.append(0)
     def batvillano():
-            Batbox=tk.Radiobutton(canvasvillano_2, text="Batman", variable=vil, value=1,bg='grey',command=quienes )
+            Batbox=tk.Radiobutton(canvasvillano_2, text="Batman", variable=vil, value=1,bg='grey',command=quienes , state='disabled'
+                                  ,disabledforeground="black",selectcolor="grey")
             Batbox.place(x=0,y=0)
             Batbox.lift()
             botones_villanos[1] = Batbox
+            villanosavencer.append(1)
     def wondervillano():    
-            Wobox=tk.Radiobutton(canvasvillano_3, text="Wonder Woman", variable=vil, value=2,bg='grey' ,command=quienes)
+            Wobox=tk.Radiobutton(canvasvillano_3, text="Wonder Woman", variable=vil, value=2,bg='grey' ,command=quienes, state='disabled'
+                                 ,disabledforeground="black",selectcolor="grey")
             Wobox.place(x=0,y=0)
             Wobox.lift()
             botones_villanos[2] = Wobox
+            villanosavencer.append(2)
     def flashvillano():
-            Flashbox=tk.Radiobutton(canvasvillano_1, text="Flash", variable=vil, value=3, bg='grey' ,command=quienes)
+            Flashbox=tk.Radiobutton(canvasvillano_1, text="Flash", variable=vil, value=3, bg='grey' ,command=quienes, state='disabled'
+                                    ,disabledforeground="black",selectcolor="grey")
             Flashbox.place(x=0,y=0)
             Flashbox.lift()
             botones_villanos[3] = Flashbox
+            villanosavencer.append(3)
     def greenvillano():
-            Greenbox=tk.Radiobutton(canvasvillano_2, text="Green  Lantern", variable=vil, value=4, bg='grey' ,command=quienes)
+            Greenbox=tk.Radiobutton(canvasvillano_2, text="Green  Lantern", variable=vil, value=4, bg='grey' ,command=quienes, state='disabled'
+                                    ,disabledforeground="black",selectcolor="grey")
             Greenbox.place(x=0,y=0)
             Greenbox.lift()
             botones_villanos[4] = Greenbox
+            villanosavencer.append(4)
     def hawkvillano():
-            Hawkbox=tk.Radiobutton(canvasvillano_3, text="Hawkgirl", variable=vil, value=5, bg='grey',command=quienes )
+            Hawkbox=tk.Radiobutton(canvasvillano_3, text="Hawkgirl", variable=vil, value=5, bg='grey',command=quienes , state='disabled'
+                                   ,disabledforeground="black",selectcolor="grey")
             Hawkbox.place(x=0,y=0)
             Hawkbox.lift()
             botones_villanos[5] = Hawkbox
+            villanosavencer.append(5)
     def martianvillano():
-            Martianbox=tk.Radiobutton(canvasvillano_1, text="Martian Manhunter", variable=vil, value=6, bg='grey' ,command=quienes)
+            Martianbox=tk.Radiobutton(canvasvillano_1, text="Martian Manhunter", variable=vil, value=6, bg='grey' ,command=quienes, state='disabled'
+                                      ,disabledforeground="black",selectcolor="grey")
             Martianbox.place(x=0,y=0)
             Martianbox.lift()
             botones_villanos[6] = Martianbox
+            villanosavencer.append(6)
     def canaryvillano():
-            Canarybox=tk.Radiobutton(canvasvillano_2, text="Black Canary", variable=vil, value=7, bg='grey',command=quienes )
+            Canarybox=tk.Radiobutton(canvasvillano_2, text="Black Canary", variable=vil, value=7, bg='grey',command=quienes, state='disabled'
+                                     ,disabledforeground="black",selectcolor="grey")
             Canarybox.place(x=0,y=0)
             Canarybox.lift()
             botones_villanos[7] = Canarybox
+            villanosavencer.append(7)
     def zatannavillano():
-            Zatannabox=tk.Radiobutton(canvasvillano_3, text="Zatanna", variable=vil, value=8, bg='grey',command=quienes )
+            Zatannabox=tk.Radiobutton(canvasvillano_3, text="Zatanna", variable=vil, value=8, bg='grey',command=quienes, state='disabled'
+                                      ,disabledforeground="black",selectcolor="grey")
             Zatannabox.place(x=0,y=0)
             Zatannabox.lift()
             botones_villanos[8] = Zatannabox
+            villanosavencer.append(8)
     def arrowvillano():
-            Arrowbox=tk.Radiobutton(canvasvillano_1, text="Green Arrow", variable=vil, value=9, bg='grey' ,command=quienes)
+            Arrowbox=tk.Radiobutton(canvasvillano_1, text="Green Arrow", variable=vil, value=9, bg='grey' ,command=quienes, state='disabled'
+                                    ,disabledforeground="black",selectcolor="grey")
             Arrowbox.place(x=0,y=0)
             Arrowbox.lift()
             botones_villanos[9] = Arrowbox
+            villanosavencer.append(9)
     def goldvillano():
-            Goldbox=tk.Radiobutton(canvasvillano_2, text="Booster Gold", variable=vil, value=10, bg='grey',command=quienes )
+            Goldbox=tk.Radiobutton(canvasvillano_2, text="Booster Gold", variable=vil, value=10, bg='grey',command=quienes, state='disabled'
+                                   ,disabledforeground="black",selectcolor="grey")
             Goldbox.place(x=0,y=0)
             Goldbox.lift()
             botones_villanos[10] = Goldbox
+            villanosavencer.append(10)
     def marvelvillano():            
-            Marvelbox=tk.Radiobutton(canvasvillano_3, text="Captain Marvel", variable=vil, value=11, bg='grey',command=quienes )
+            Marvelbox=tk.Radiobutton(canvasvillano_3, text="Captain Marvel", variable=vil, value=11, bg='grey',command=quienes, state='disabled'
+                                     ,disabledforeground="black",selectcolor="grey")
             Marvelbox.place(x=0,y=0)
             Marvelbox.lift()
             botones_villanos[11] = Marvelbox
+            villanosavencer.append(11)
     def nightvillano():
-            Nightbox=tk.Radiobutton(canvasvillano_1, text="Nightwing", variable=vil, value=12, bg='grey',command=quienes )
+            Nightbox=tk.Radiobutton(canvasvillano_1, text="Nightwing", variable=vil, value=12, bg='grey',command=quienes, state='disabled'
+                                    ,disabledforeground="black",selectcolor="grey")
             Nightbox.place(x=0,y=0)
             Nightbox.lift()
             botones_villanos[12] = Nightbox
+            villanosavencer.append(12)
     def supgvillano():
-            Supgbox=tk.Radiobutton(canvasvillano_2, text="Supergirl", variable=vil, value=13, bg='grey' ,command=quienes)
+            Supgbox=tk.Radiobutton(canvasvillano_2, text="Supergirl", variable=vil, value=13, bg='grey' ,command=quienes, state='disabled'
+                                   ,disabledforeground="black",selectcolor="grey")
             Supgbox.place(x=0,y=0)
             Supgbox.lift()
             botones_villanos[13] = Supgbox
+            villanosavencer.append(13)
     def aquavillano():
-            Aquabox=tk.Radiobutton(canvasvillano_3, text="Aquaman", variable=vil, value=14, bg='grey',command=quienes )
+            Aquabox=tk.Radiobutton(canvasvillano_3, text="Aquaman", variable=vil, value=14, bg='grey',command=quienes, state='disabled'
+                                   ,disabledforeground="black",selectcolor="grey")
             Aquabox.place(x=0,y=0)    
             Aquabox.lift()
             botones_villanos[14] = Aquabox
+            villanosavencer.append(14)
             
     posiblesvillanos_1=[]
     posiblesvillanos_2=[]
@@ -189,9 +220,10 @@ def principalis():
     villanotres =random.choice(posiblesvillanos_3)
     villanotres()
 
-    villanosavencer=[villanouno,villanodos,villanotres]
+    
     malomalisimo=random.choice(villanosavencer)
     vil.set(malomalisimo)
+   
     
     
     botones_heroes={}        
@@ -341,7 +373,8 @@ def principalis():
         fonata_copy_=ImageTk.PhotoImage(fonata_copy__resize)
         canvasmapa_grande.create_image(0,0,image=fonata_copy_,anchor=tk.NW)
         canvasmapa_grande.image=fonata_copy_
-
+        malomalisimo=random.choice(villanosavencer)
+        vil.set(malomalisimo)
         villanouno =random.choice(posiblesvillanos_1)
         villanouno()
 
@@ -380,7 +413,8 @@ def principalis():
         fondos=ImageTk.PhotoImage(fondos_resize)
         canvasmapa.create_image(80,50,image=fondos,anchor=tk.NW)
         canvasmapa.image=fondos
-
+        malomalisimo=random.choice(villanosavencer)
+        vil.set(malomalisimo)
         fondos_copy_original=Image.open('fondos_copy.png')
         fondos_copy__resize=fondos_copy_original.resize((700,600))
         fondos_copy_=ImageTk.PhotoImage(fondos_copy__resize)
@@ -425,7 +459,8 @@ def principalis():
         fontres=ImageTk.PhotoImage(fontres_resize)
         canvasmapa.create_image(80,50,image=fontres,anchor=tk.NW)
         canvasmapa.image=fontres
-
+        malomalisimo=random.choice(villanosavencer)
+        vil.set(malomalisimo)
         fontres_copy_original=Image.open('fontres_copy.png')
         fontres_copy__resize=fontres_copy_original.resize((700,600))
         fontres_copy_=ImageTk.PhotoImage(fontres_copy__resize)
@@ -462,6 +497,9 @@ def principalis():
         for widget in sub_canvas_menu.winfo_children():
             widget.destroy()
         superheroes()
+       
+        malomalisimo=random.choice(villanosavencer)
+        vil.set(malomalisimo)
         texto_ubicacion_uno=tk.Label(venjuego,text=('Salón de la Justicia'),bg='black',fg='white',font=('Papyrus',12), compound='bottom')
         texto_ubicacion_uno.place(x=100,y=200)
         boton_mapa_2=tk.Button(canvasmapa, text='Siguiente',command=sub_siguiente_2)
@@ -575,7 +613,8 @@ def principalis():
     cargar_personajes()
     
     def defender():
-        
+            quienes()
+            quiensoy()
             tapar=tk.Label(venjuego,text=('                                                                    '))
             tapar.place(x=1000,y=600)
         
@@ -590,15 +629,21 @@ def principalis():
                 if villano['vida']<=0:
                     advertencia=tk.Label(venjuego,text=('Tu personaje ha muerto, escoje otro'))
                     advertencia.place(x=1000,y=600)
+                    malomalisimo=random.choice(villanosavencer)
+                    vil.set(malomalisimo)
             else:
             
                 time.sleep(3)
                 fight.place(x=780, y=600)
                 daño = heroe['ataque'] - villano['defensa']
                 villano['vida'] = villano['vida'] - daño
+                malomalisimo=random.choice(villanosavencer)
+                vil.set(malomalisimo)
+                quienes()
                 quiensoy()
                 if villano['vida']<=0:
-                    
+                    malomalisimo=random.choice(villanosavencer)
+                    vil.set(malomalisimo)
                     botones_heroes[id_villano].destroy()
                 
 
@@ -618,6 +663,8 @@ def principalis():
             if heroe['vida']<=0 or villano['vida']<=0:
                     advertencia=tk.Label(venjuego,text=('Tu personaje ha muerto, escoje otro'))
                     advertencia.place(x=1000,y=600)
+                    malomalisimo=random.choice(villanosavencer)
+                    vil.set(malomalisimo)
             
             else:
                     time.sleep(3)
@@ -625,9 +672,14 @@ def principalis():
                     fight.place(x=190678)
                     daño = heroe['ataque'] - villano['defensa']
                     villano['vida'] = villano['vida'] - daño
+                    
+                    malomalisimo=random.choice(villanosavencer)
+                    vil.set(malomalisimo)
                     quienes()
+                    quiensoy()
                     if villano['vida']<=0:
-                        
+                        malomalisimo=random.choice(villanosavencer)
+                        vil.set(malomalisimo)
                         botones_villanos[id_villano].destroy()
                         puntaje+=1
                         puntos=tk.Label(canvasmenu, text=(puntaje),bg='grey')

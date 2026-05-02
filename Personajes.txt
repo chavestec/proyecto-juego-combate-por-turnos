@@ -1,0 +1,16 @@
+id,nombre,vida,ataque,defensa
+0,Superman,200,1000,50
+1,Batman,100,51,40
+2,WonderWoman,186,99,49
+3,Flash,100,80,40
+4,GreenLantern,85,85,50
+5,Hawkgirl,83,90,37
+6,MartianManhunter,149,120,50
+7,BlackCanary,67,75,37
+8,Zatanna,70,80,45
+9,GreenArrow,67,75,37
+10,BoosterGold,70,56,35
+11,CaptainMarvel,200,99,51
+12,Nightwing,67,68,29
+13,Supergirl,190,98,49
+14,Aquaman,150,80,40

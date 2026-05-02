@@ -30,7 +30,7 @@ def principalis():
     canvasvillano_2.place(x=1210,y=150)
     canvasvillano_3=tk.Canvas(venjuego,bg='grey',width=250,height=200)
     canvasvillano_3.place(x=1210,y=300)
-
+    ps=tk.IntVar()
     vil=tk.IntVar()
     def villanos():
        
@@ -202,9 +202,8 @@ def principalis():
     villanotres =random.choice(posiblesvillanos_3)
     villanotres()
                 
-    def jugables():
-        ps=tk.IntVar()
-        def seleccionado():
+    
+    def seleccionado():
             if ps.get()==0:
                 print ('Superman')
             elif ps.get()==1:
@@ -237,76 +236,76 @@ def principalis():
                 print('Aquaman')
             
             
-        if (s.get())==1:
+    if (s.get())==1:
             rb1 = tk.Radiobutton(sub_canvas_menu, text="Superman",image=supphoto, variable=ps, value=0,bg='grey',command=seleccionado)
             rb1.pack(anchor='w')            
                     
-        if (b.get())==1:
+    if (b.get())==1:
             rb2 = tk.Radiobutton(sub_canvas_menu, text="Batman", variable=ps, value=1, bg='grey',command=seleccionado)
             rb2.pack(anchor='w')
 
     
-        if (w.get())==1:
+    if (w.get())==1:
             rb1 = tk.Radiobutton(sub_canvas_menu, text="Wonder Woman", variable=ps, value=2,bg='grey',command=seleccionado)
             rb1.pack(anchor='w')
              
     
-        if (f.get())==1:
+    if (f.get())==1:
             rb2 = tk.Radiobutton(sub_canvas_menu, text="Flash", variable=ps, value=3, bg='grey',command=seleccionado)
             rb2.pack(anchor='w')
              
     
-        if (g.get())==1:
+    if (g.get())==1:
             rb2 = tk.Radiobutton(sub_canvas_menu, text="Green  Lantern", variable=ps, value=4, bg='grey',command=seleccionado)
             rb2.pack(anchor='w')
 
              
-        if (h.get())==1:
+    if (h.get())==1:
             rb2 = tk.Radiobutton(sub_canvas_menu, text="Hawkgirl", variable=ps, value=5, bg='grey',command=seleccionado)
             rb2.pack(anchor='w')
              
         
-        if (mm.get())==1:
+    if (mm.get())==1:
             rb2 = tk.Radiobutton(sub_canvas_menu, text="Martian Manhunter", variable=ps, value=6, bg='grey',command=seleccionado)
             rb2.pack(anchor='w')
              
         
-        if (ca.get())==1:
+    if (ca.get())==1:
             rb2 = tk.Radiobutton(sub_canvas_menu, text="Black Canary", variable=ps, value=7, bg='grey',command=seleccionado)
             rb2.pack(anchor='w')
              
 
-        if (z.get())==1:
+    if (z.get())==1:
             rb2 = tk.Radiobutton(sub_canvas_menu, text="Zatanna", variable=ps, value=8, bg='grey',command=seleccionado)
             rb2.pack(anchor='w')
              
 
-        if (a.get())==1:
+    if (a.get())==1:
             rb2 = tk.Radiobutton(sub_canvas_menu, text="Green Arrow", variable=ps, value=9, bg='grey',command=seleccionado)
             rb2.pack(anchor='w')
              
         
-        if (bg.get())==1:
+    if (bg.get())==1:
             rb2 = tk.Radiobutton(sub_canvas_menu, text="Booster Gold", variable=ps, value=10, bg='grey',command=seleccionado)
             rb2.pack(anchor='w')
              
             
-        if (m.get())==1:
+    if (m.get())==1:
             rb2 = tk.Radiobutton(sub_canvas_menu, text="Captain Marvel", variable=ps, value=11, bg='grey',command=seleccionado)
             rb2.pack(anchor='w')
         
             
-        if (nw.get())==1:
+    if (nw.get())==1:
             rb2 = tk.Radiobutton(sub_canvas_menu, text="Captain Marvel", variable=ps, value=12, bg='grey',command=seleccionado)
             rb2.pack(anchor='w')
         
             
             
-        if (sg.get())==1:
+    if (sg.get())==1:
             rb2 = tk.Radiobutton(sub_canvas_menu, text="Supergirl", variable=ps, value=13, bg='grey',command=seleccionado)
             rb2.pack(anchor='w')
         
-        if (aq.get())==1:
+    if (aq.get())==1:
             rb2 = tk.Radiobutton(sub_canvas_menu, text="Aquaman", variable=ps, value=14, bg='grey',command=seleccionado)
             rb2.pack(anchor='w')
         
@@ -517,22 +516,27 @@ def principalis():
         canvasmenu.create_image(10,10,image=uno,anchor=tk.NW)
         canvasmenu.image=uno
 
-
+    x=ps.get()
+    y=vil.get()
+    
     def defender():
         time.sleep(3)
         resist.place(y=90000)
         fight.place(x=600, y=600)
-    def atacar():
+    def atacar(x,y):
         fight.place(x=100000000000000000000000)
         time.sleep(3)
         resist.place(x=600, y=600)
         resist.lift()
+
+        
+      
         
     resist=tk.Button(venjuego, text=('Defender'), command=defender)
     fight=tk.Button(venjuego, text=('  Atacar  '), command=atacar)
     fight.place(x=600, y=600)
   
-    jugables()
+    seleccionado()
     villanos() 
     venjuego.mainloop()
 #--------------------------------------------------------------------------------

@@ -66,25 +66,25 @@ Los personajes jugables se escogen en la ventana principal, y luego todo lo dem�
 
 Diagrama de Módulos del Sistema
 Ventana_principal_copy.py
-•        window: Ventana principal de Tkinter con selección de nombre, avatar y héroes.
-•        prograbotonuser(): Muestra el nombre del jugador.
-•        avatar_seleccionado(): Para escoger el avatar.
-•        paginabatalla(): Para escoger los tres personajes jugables
-•        principalis(): Función principal de la ventana de batalla.
+       window: Ventana principal de Tkinter con selección de nombre, avatar y héroes.
+        prograbotonuser(): Muestra el nombre del jugador.
+        avatar_seleccionado(): Para escoger el avatar.
+        paginabatalla(): Para escoger los tres personajes jugables
+        principalis(): Función principal de la ventana de batalla.
 Submódulos dentro de principalis():
-•        cargar_personajes(): Mete los personajes del CSV a un diccionario.
-•        superheroes(): Crea los Radiobuttons de los personajes jugables.
-•        supvillano(), batvillano()... : Crean Radiobuttons de villanos.
-•        quiensoy(): Actualiza la ficha del héroe que se está usando.
-•        quienes(): Actualiza la ficha del villano que se está enfrentando al heroe.
-•        atacar(): Para atacar al villano.
-•        defender(): El villano ataca al personaje jugable.
-•        Desde siguiente_1() hasta siguiente_4(): Avanzan a la siguiente ubicación del mapa.
-•        sub_siguiente_1() a sub_volver(): Validan el puntaje antes de avanzar de ronda.
+        cargar_personajes(): Mete los personajes del CSV a un diccionario.
+        superheroes(): Crea los Radiobuttons de los personajes jugables.
+        supvillano(), batvillano()... : Crean Radiobuttons de villanos.
+        quiensoy(): Actualiza la ficha del héroe que se está usando.
+        quienes(): Actualiza la ficha del villano que se está enfrentando al heroe.
+       atacar(): Para atacar al villano.
+        defender(): El villano ataca al personaje jugable.
+        Desde siguiente_1() hasta siguiente_4(): Avanzan a la siguiente ubicación del mapa.
+        sub_siguiente_1() a sub_volver(): Validan el puntaje antes de avanzar de ronda.
 Módulos externos:
-•        funcionabout.py: Crea una ventana con el about del proyecto.
-•        Personajes.txt: Aquí están guardados los atributos de los personajes.
-•        Archivos PNG: Imágenes de personajes  y fondos para los niveles.
+       funcionabout.py: Crea una ventana con el about del proyecto.
+        Personajes.txt: Aquí están guardados los atributos de los personajes.
+     Archivos PNG: Imágenes de personajes  y fondos para los niveles.
 
 
 
